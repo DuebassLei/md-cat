@@ -17,6 +17,10 @@
         <span class="option-icon">📝</span>
         <span class="option-text">MD格式</span>
       </div>
+      <div class="copy-option" @click="copyContent('notion')">
+        <span class="option-icon">📑</span>
+        <span class="option-text">Notion笔记格式</span>
+      </div>
     </div>
   </div>
 </template>
@@ -78,6 +82,9 @@ const copyContent = async (format) => {
   if (format === 'markdown') {
     // 直接复制 Markdown 源码
     contentToCopy = props.content
+  } else if (format === 'notion') {
+    // Notion笔记格式：优化Markdown以适配Notion导入
+    contentToCopy = convertToNotionFormat(props.content)
   } else {
     // 等待 DOM 更新
     await new Promise(resolve => setTimeout(resolve, 100))
@@ -128,12 +135,49 @@ const copyContent = async (format) => {
     const formatNames = {
       'wechat': '公众号',
       'html': 'HTML',
-      'markdown': 'Markdown'
+      'markdown': 'Markdown',
+      'notion': 'Notion笔记'
     }
     showToast(`已复制${formatNames[format]}格式`)
   } else {
     showToast('复制失败，请手动复制', 'error')
   }
+}
+
+// 转换为Notion兼容格式
+const convertToNotionFormat = (markdown) => {
+  let content = markdown
+  
+  // Notion对Markdown的支持很好，但需要做一些优化：
+  // 1. 处理Mermaid图表（Notion不支持，转换为文本说明）
+  // 2. 确保代码块格式正确
+  // 3. 优化数学公式格式（Notion支持LaTeX）
+  
+  // 处理Mermaid图表，转换为Notion可读的文本说明
+  content = content.replace(/```mermaid\s*\n([\s\S]*?)```/g, (match, diagram) => {
+    const cleanDiagram = diagram.trim()
+    return `> **📊 图表说明**\n> \n> 以下为Mermaid图表代码，Notion不支持直接渲染Mermaid图表，请手动在Notion中重新创建图表。\n> \n> **图表代码：**\n> \n> \`\`\`\n> ${cleanDiagram}\n> \`\`\``
+  })
+  
+  // 处理没有语言标识的代码块（Notion支持，但建议保留原样）
+  // Notion会自动识别代码块，无需强制添加语言标识
+  
+  // 确保代码块前后有空行（提高Notion导入的稳定性）
+  content = content.replace(/([^\n])\n```/g, '$1\n\n```')
+  content = content.replace(/```([^\n]*)\n([^\n])/g, '```$1\n\n$2')
+  
+  // 优化标题格式，确保标题前后有空行
+  content = content.replace(/([^\n])\n(#{1,6}\s+[^\n]+)/g, '$1\n\n$2')
+  content = content.replace(/(#{1,6}\s+[^\n]+)\n([^\n])/g, '$1\n\n$2')
+  
+  // Notion对Markdown的支持很好，其他格式保持原样即可
+  // - 列表：完全支持
+  // - 表格：完全支持
+  // - 数学公式：支持LaTeX格式（$...$ 和 $$...$$）
+  // - 引用：完全支持
+  // - 链接和图片：完全支持
+  
+  return content.trim()
 }
 
 const showToast = (message, type = 'success') => {

@@ -8,9 +8,7 @@
       <div class="header-actions">
         <ThemeSelector v-model="currentTheme" @update:modelValue="handleThemeChange" />
         <CopyButton ref="copyButtonRef" :content="markdownContent" :theme="currentTheme" @copy="handleCopy" />
-        <button @click="handleSave" class="save-btn" title="保存 (Ctrl+S)">
-          💾 保存
-        </button>
+        <SaveButton :content="markdownContent" :theme="currentTheme" @save="handleSave" />
         
         <!-- 作者信息 -->
         <div class="author-info" @click="showQRCode = true">
@@ -80,6 +78,7 @@ import MarkdownPreview from './components/MarkdownPreview.vue'
 import StatsBar from './components/StatsBar.vue'
 import ThemeSelector from './components/ThemeSelector.vue'
 import CopyButton from './components/CopyButton.vue'
+import SaveButton from './components/SaveButton.vue'
 import { getThemeList, getTheme } from './themes/index.js'
 
 const STORAGE_KEY = 'md-cat-content'
@@ -177,18 +176,6 @@ const handleSave = () => {
   localStorage.setItem(STORAGE_KEY, markdownContent.value)
   localStorage.setItem(STORAGE_THEME_KEY, currentTheme.value)
   lastSaved.value = new Date().toLocaleTimeString('zh-CN')
-  
-  // 显示保存提示
-  const btn = document.querySelector('.save-btn')
-  if (btn) {
-    const originalText = btn.textContent
-    btn.textContent = '✓ 已保存'
-    btn.style.color = '#52c41a'
-    setTimeout(() => {
-      btn.textContent = originalText
-      btn.style.color = ''
-    }, 2000)
-  }
 }
 
 const handleThemeChange = (value) => {

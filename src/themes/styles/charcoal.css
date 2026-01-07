@@ -1,0 +1,389 @@
+@charset "UTF-8";
+/*
+ * PrismJS default theme
+ * 这个文件只应该包含变量
+ */
+/*
+ * Default bear theme，适用于 core/mweb-bear.scss。
+ * 所有 bear 主题，只需 import 这个文件，然后修改配色方案即可。
+ */
+/* font */
+/* container */
+/*  spacing */
+/* color */
+/* other */
+/**
+ * 在 bear 的主题中，某些变量的取值和其他变量是绑定的。
+ * 统一写在这里，这个文件应该在变量文件的最后被引入。
+ */
+/**
+ * Bear 的默认样式表。通过调整各个颜色变量的取值，就可以得到不同的 bear 主题。
+ * Bear 的配色方案位于 src/themes/bear-palettes 目录下。
+ */
+/**
+ * PrismJS 的样式表。颜色全部用变量表示，方便后续切换不同的配色方案。
+ */
+/* PrismJS 1.23.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+.preview-content.theme-charcoal code[class*=language-],
+.preview-content.theme-charcoal pre[class*=language-] {
+  color: rgb(166, 166, 166);
+  background: none;
+  font-family: Menlo-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5rem;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+.preview-content.theme-charcoal pre[class*=language-]::-moz-selection, .preview-content.theme-charcoal pre[class*=language-] ::-moz-selection,
+.preview-content.theme-charcoal code[class*=language-]::-moz-selection, .preview-content.theme-charcoal code[class*=language-] ::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+.preview-content.theme-charcoal pre[class*=language-]::selection, .preview-content.theme-charcoal pre[class*=language-] ::selection,
+.preview-content.theme-charcoal code[class*=language-]::selection, .preview-content.theme-charcoal code[class*=language-] ::selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+@media print {
+  .preview-content.theme-charcoal code[class*=language-],
+  .preview-content.theme-charcoal pre[class*=language-] {
+    text-shadow: none;
+  }
+}
+.preview-content.theme-charcoal {
+  /* Code blocks */
+}
+.preview-content.theme-charcoal pre[class*=language-] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+}
+.preview-content.theme-charcoal :not(pre) > code[class*=language-],
+.preview-content.theme-charcoal pre[class*=language-] {
+  background: rgb(47, 51, 55);
+}
+.preview-content.theme-charcoal {
+  /* Inline code */
+}
+.preview-content.theme-charcoal :not(pre) > code[class*=language-] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+.preview-content.theme-charcoal .token.comment,
+.preview-content.theme-charcoal .token.prolog,
+.preview-content.theme-charcoal .token.doctype,
+.preview-content.theme-charcoal .token.cdata {
+  color: rgb(128, 128, 128);
+}
+.preview-content.theme-charcoal .token.punctuation {
+  color: #999;
+}
+.preview-content.theme-charcoal .token.namespace {
+  opacity: 0.7;
+}
+.preview-content.theme-charcoal .token.number,
+.preview-content.theme-charcoal .token.boolean {
+  color: rgb(72, 131, 185);
+}
+.preview-content.theme-charcoal .token.property,
+.preview-content.theme-charcoal .token.tag,
+.preview-content.theme-charcoal .token.constant,
+.preview-content.theme-charcoal .token.symbol,
+.preview-content.theme-charcoal .token.deleted {
+  color: #905;
+}
+.preview-content.theme-charcoal .token.selector,
+.preview-content.theme-charcoal .token.string,
+.preview-content.theme-charcoal .token.char,
+.preview-content.theme-charcoal .token.builtin,
+.preview-content.theme-charcoal .token.inserted {
+  color: rgb(199, 198, 122);
+}
+.preview-content.theme-charcoal .token.attr-name {
+  color: rgb(199, 198, 122);
+}
+.preview-content.theme-charcoal .token.char {
+  color: rgb(199, 198, 122);
+}
+.preview-content.theme-charcoal .token.operator,
+.preview-content.theme-charcoal .token.entity,
+.preview-content.theme-charcoal .token.url,
+.preview-content.theme-charcoal .language-css .token.string,
+.preview-content.theme-charcoal .style .token.string {
+  color: #920448;
+  background: none;
+}
+.preview-content.theme-charcoal .token.atrule,
+.preview-content.theme-charcoal .token.attr-value,
+.preview-content.theme-charcoal .token.keyword {
+  color: rgb(72, 131, 185);
+}
+.preview-content.theme-charcoal .token.function,
+.preview-content.theme-charcoal .token.class-name {
+  color: rgb(72, 131, 185);
+}
+.preview-content.theme-charcoal .token.regex,
+.preview-content.theme-charcoal .token.important,
+.preview-content.theme-charcoal .token.variable {
+  color: #0E73A2;
+}
+.preview-content.theme-charcoal .token.important,
+.preview-content.theme-charcoal .token.bold {
+  font-weight: bold;
+}
+.preview-content.theme-charcoal .token.italic {
+  font-style: italic;
+}
+.preview-content.theme-charcoal .token.entity {
+  cursor: help;
+}
+
+.preview-content.theme-charcoal {
+  font-family: AvenirNext-Regular, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  font-size: 16px;
+  color: rgb(166, 166, 166);
+}
+
+.preview-content.theme-charcoal {
+  background-color: rgb(46, 50, 53);
+  line-height: 1.6em;
+  -webkit-text-size-adjust: 100%;
+  max-width: 46rem;
+  margin: 0px auto;
+  padding: 1.6em 3.2em;
+}
+
+.preview-content.theme-charcoal * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.preview-content.theme-charcoal > *:first-child {
+  margin-top: 0 !important;
+}
+.preview-content.theme-charcoal > *:last-child {
+  margin-top: 0 !important;
+}
+.preview-content.theme-charcoal p, .preview-content.theme-charcoal pre, .preview-content.theme-charcoal ul, .preview-content.theme-charcoal ol, .preview-content.theme-charcoal dl, .preview-content.theme-charcoal form, .preview-content.theme-charcoal details, .preview-content.theme-charcoal dl, .preview-content.theme-charcoal blockquote, .preview-content.theme-charcoal table, .preview-content.theme-charcoal xmp, .preview-content.theme-charcoal plaintext, .preview-content.theme-charcoal listing, .preview-content.theme-charcoal figure,
+.preview-content.theme-charcoal pre[class*=language-] {
+  margin: 0.75em 0 0.45em;
+}
+.preview-content.theme-charcoal hr {
+  margin: 0.75em auto;
+}
+.preview-content.theme-charcoal ul ul, .preview-content.theme-charcoal ul ol, .preview-content.theme-charcoal ol ul, .preview-content.theme-charcoal ol ol {
+  margin-bottom: 0px;
+}
+.preview-content.theme-charcoal h1, .preview-content.theme-charcoal h2, .preview-content.theme-charcoal h3, .preview-content.theme-charcoal h4, .preview-content.theme-charcoal h5, .preview-content.theme-charcoal h6 {
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  margin-left: 0;
+  margin-right: 0;
+  font-family: AvenirNext-Medium;
+  font-weight: 500;
+  line-height: 1.5em;
+  color: rgb(172, 172, 172);
+}
+.preview-content.theme-charcoal h1 {
+  font-size: 1.5em;
+}
+.preview-content.theme-charcoal h2 {
+  font-size: 1.3em;
+}
+.preview-content.theme-charcoal h3 {
+  font-size: 1.1em;
+}
+.preview-content.theme-charcoal h4 {
+  font-size: 1em;
+}
+.preview-content.theme-charcoal h5 {
+  font-size: 1em;
+}
+.preview-content.theme-charcoal h6 {
+  font-size: 1em;
+}
+.preview-content.theme-charcoal hr {
+  height: 1px;
+  border: 0;
+  background-color: rgb(62, 67, 72);
+  border-style: inset;
+  border-width: 1px;
+}
+.preview-content.theme-charcoal p {
+  margin-left: 0;
+  margin-right: 0;
+}
+.preview-content.theme-charcoal pre, .preview-content.theme-charcoal pre[class*=language-] {
+  padding: 0;
+  border: 0;
+}
+.preview-content.theme-charcoal blockquote {
+  display: block;
+  padding-left: 0.8em;
+  border-left: 0.2em solid rgb(155, 183, 196);
+}
+.preview-content.theme-charcoal blockquote > :first-child {
+  margin-top: 0;
+}
+.preview-content.theme-charcoal blockquote > :last-child {
+  margin-bottom: 0;
+}
+.preview-content.theme-charcoal li {
+  word-wrap: break-all;
+}
+.preview-content.theme-charcoal ul, .preview-content.theme-charcoal ol {
+  list-style: none;
+}
+.preview-content.theme-charcoal ul {
+  margin-left: 1.3em;
+  padding: 0;
+}
+.preview-content.theme-charcoal ol {
+  margin-left: 1.3em;
+  padding: 0;
+  counter-reset: ol_counter;
+}
+.preview-content.theme-charcoal ul > li {
+  position: relative;
+}
+.preview-content.theme-charcoal ul > li:before {
+  content: "•";
+  color: rgb(155, 183, 196);
+  position: absolute;
+  left: -1.1em;
+}
+.preview-content.theme-charcoal ol > li {
+  position: relative;
+}
+.preview-content.theme-charcoal ol > li:before {
+  content: counter(ol_counter) ".";
+  counter-increment: ol_counter;
+  color: rgb(155, 183, 196);
+  text-align: right;
+  min-width: 1em;
+  position: absolute;
+  left: -1.5em;
+}
+.preview-content.theme-charcoal li + li {
+  margin-top: 0.25em;
+}
+.preview-content.theme-charcoal ul ul, .preview-content.theme-charcoal ol ul, .preview-content.theme-charcoal ul ol, .preview-content.theme-charcoal ol ol, .preview-content.theme-charcoal li ul, .preview-content.theme-charcoal li ol {
+  margin-top: 0.25em;
+  margin-left: 2em;
+}
+.preview-content.theme-charcoal .task-list-item {
+  list-style-type: none;
+  text-indent: -1.5em;
+}
+.preview-content.theme-charcoal .task-list-item:before {
+  content: "";
+  display: static;
+  margin-right: 0px;
+}
+.preview-content.theme-charcoal .task-list-item > input[type=checkbox] {
+  text-indent: -1.7em;
+}
+.preview-content.theme-charcoal img {
+  max-width: 100%;
+  height: auto;
+}
+.preview-content.theme-charcoal u {
+  text-decoration: none;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgb(155, 183, 196) 50%);
+  background-repeat: repeat-x;
+  background-size: 2px 2px;
+  background-position: 0 1em;
+}
+.preview-content.theme-charcoal a {
+  color: rgb(171, 196, 207);
+  text-decoration: none;
+}
+.preview-content.theme-charcoal a:hover, .preview-content.theme-charcoal a:focus, .preview-content.theme-charcoal a:active {
+  text-decoration: underline;
+}
+.preview-content.theme-charcoal a img {
+  border: none;
+}
+.preview-content.theme-charcoal b, .preview-content.theme-charcoal strong {
+  font-weight: bold;
+}
+.preview-content.theme-charcoal i, .preview-content.theme-charcoal cite, .preview-content.theme-charcoal em, .preview-content.theme-charcoal var, .preview-content.theme-charcoal address, .preview-content.theme-charcoal dfn {
+  font-style: italic;
+}
+.preview-content.theme-charcoal del, .preview-content.theme-charcoal s {
+  color: rgb(122, 122, 122);
+}
+.preview-content.theme-charcoal pre, .preview-content.theme-charcoal xmp, .preview-content.theme-charcoal plaintext, .preview-content.theme-charcoal listing, .preview-content.theme-charcoal code, .preview-content.theme-charcoal kbd, .preview-content.theme-charcoal tt, .preview-content.theme-charcoal samp {
+  font-family: Menlo-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+.preview-content.theme-charcoal code {
+  display: inline;
+  border: solid 1px rgb(62, 67, 72);
+  padding: 0.2em 0.5em;
+  font-size: 0.9em;
+  color: rgb(153, 153, 153);
+  background-color: rgb(47, 51, 55);
+}
+.preview-content.theme-charcoal pre > code {
+  display: block;
+  border: solid 1px rgb(62, 67, 72);
+  padding: 0.7em 1em;
+  font-size: 0.9em;
+  overflow-x: auto;
+}
+.preview-content.theme-charcoal mark {
+  color: inherit;
+  display: inline;
+  padding: 0.2em 0.5em;
+  background-color: rgb(7, 16, 25);
+}
+.preview-content.theme-charcoal figcaption {
+  text-align: center;
+}
+.preview-content.theme-charcoal table {
+  color: rgb(153, 153, 153);
+  border-collapse: collapse;
+  background-color: rgb(47, 51, 55);
+  border-spacing: 2px;
+  font-size: 1em;
+  border: 1px;
+  border-spacing: 0;
+}
+.preview-content.theme-charcoal th, .preview-content.theme-charcoal td {
+  padding: 0.7em 1em;
+  font-size: 0.9em;
+  border: 1px solid rgb(62, 67, 72);
+}
+.preview-content.theme-charcoal caption, .preview-content.theme-charcoal th, .preview-content.theme-charcoal td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+.preview-content.theme-charcoal div[id^=mweb-chart-ele] svg {
+  background-color: white;
+}
+.preview-content.theme-charcoal .footnotes > ol li {
+  text-indent: 0;
+}
+.preview-content.theme-charcoal .footnotes > ol li::before {
+  float: left;
+}

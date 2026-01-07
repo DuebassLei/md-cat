@@ -1,0 +1,389 @@
+@charset "UTF-8";
+/*
+ * PrismJS default theme
+ * 这个文件只应该包含变量
+ */
+/*
+ * Default bear theme，适用于 core/mweb-bear.scss。
+ * 所有 bear 主题，只需 import 这个文件，然后修改配色方案即可。
+ */
+/* font */
+/* container */
+/*  spacing */
+/* color */
+/* other */
+/**
+ * 在 bear 的主题中，某些变量的取值和其他变量是绑定的。
+ * 统一写在这里，这个文件应该在变量文件的最后被引入。
+ */
+/**
+ * Bear 的默认样式表。通过调整各个颜色变量的取值，就可以得到不同的 bear 主题。
+ * Bear 的配色方案位于 src/themes/bear-palettes 目录下。
+ */
+/**
+ * PrismJS 的样式表。颜色全部用变量表示，方便后续切换不同的配色方案。
+ */
+/* PrismJS 1.23.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+.preview-content.theme-gotham code[class*=language-],
+.preview-content.theme-gotham pre[class*=language-] {
+  color: rgb(106, 169, 185);
+  background: none;
+  font-family: Menlo-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5rem;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+.preview-content.theme-gotham pre[class*=language-]::-moz-selection, .preview-content.theme-gotham pre[class*=language-] ::-moz-selection,
+.preview-content.theme-gotham code[class*=language-]::-moz-selection, .preview-content.theme-gotham code[class*=language-] ::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+.preview-content.theme-gotham pre[class*=language-]::selection, .preview-content.theme-gotham pre[class*=language-] ::selection,
+.preview-content.theme-gotham code[class*=language-]::selection, .preview-content.theme-gotham code[class*=language-] ::selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+@media print {
+  .preview-content.theme-gotham code[class*=language-],
+  .preview-content.theme-gotham pre[class*=language-] {
+    text-shadow: none;
+  }
+}
+.preview-content.theme-gotham {
+  /* Code blocks */
+}
+.preview-content.theme-gotham pre[class*=language-] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+}
+.preview-content.theme-gotham :not(pre) > code[class*=language-],
+.preview-content.theme-gotham pre[class*=language-] {
+  background: rgb(10, 23, 34);
+}
+.preview-content.theme-gotham {
+  /* Inline code */
+}
+.preview-content.theme-gotham :not(pre) > code[class*=language-] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+.preview-content.theme-gotham .token.comment,
+.preview-content.theme-gotham .token.prolog,
+.preview-content.theme-gotham .token.doctype,
+.preview-content.theme-gotham .token.cdata {
+  color: rgb(109, 171, 186);
+}
+.preview-content.theme-gotham .token.punctuation {
+  color: #999;
+}
+.preview-content.theme-gotham .token.namespace {
+  opacity: 0.7;
+}
+.preview-content.theme-gotham .token.number,
+.preview-content.theme-gotham .token.boolean {
+  color: rgb(118, 118, 193);
+}
+.preview-content.theme-gotham .token.property,
+.preview-content.theme-gotham .token.tag,
+.preview-content.theme-gotham .token.constant,
+.preview-content.theme-gotham .token.symbol,
+.preview-content.theme-gotham .token.deleted {
+  color: #905;
+}
+.preview-content.theme-gotham .token.selector,
+.preview-content.theme-gotham .token.string,
+.preview-content.theme-gotham .token.char,
+.preview-content.theme-gotham .token.builtin,
+.preview-content.theme-gotham .token.inserted {
+  color: rgb(238, 139, 104);
+}
+.preview-content.theme-gotham .token.attr-name {
+  color: rgb(238, 139, 104);
+}
+.preview-content.theme-gotham .token.char {
+  color: rgb(238, 139, 104);
+}
+.preview-content.theme-gotham .token.operator,
+.preview-content.theme-gotham .token.entity,
+.preview-content.theme-gotham .token.url,
+.preview-content.theme-gotham .language-css .token.string,
+.preview-content.theme-gotham .style .token.string {
+  color: #920448;
+  background: none;
+}
+.preview-content.theme-gotham .token.atrule,
+.preview-content.theme-gotham .token.attr-value,
+.preview-content.theme-gotham .token.keyword {
+  color: rgb(160, 162, 182);
+}
+.preview-content.theme-gotham .token.function,
+.preview-content.theme-gotham .token.class-name {
+  color: rgb(160, 162, 182);
+}
+.preview-content.theme-gotham .token.regex,
+.preview-content.theme-gotham .token.important,
+.preview-content.theme-gotham .token.variable {
+  color: #0E73A2;
+}
+.preview-content.theme-gotham .token.important,
+.preview-content.theme-gotham .token.bold {
+  font-weight: bold;
+}
+.preview-content.theme-gotham .token.italic {
+  font-style: italic;
+}
+.preview-content.theme-gotham .token.entity {
+  cursor: help;
+}
+
+.preview-content.theme-gotham {
+  font-family: AvenirNext-Regular, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  font-size: 16px;
+  color: rgb(106, 169, 185);
+}
+
+.preview-content.theme-gotham {
+  background-color: rgb(17, 21, 28);
+  line-height: 1.6em;
+  -webkit-text-size-adjust: 100%;
+  max-width: 46rem;
+  margin: 0px auto;
+  padding: 1.6em 3.2em;
+}
+
+.preview-content.theme-gotham * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.preview-content.theme-gotham > *:first-child {
+  margin-top: 0 !important;
+}
+.preview-content.theme-gotham > *:last-child {
+  margin-top: 0 !important;
+}
+.preview-content.theme-gotham p, .preview-content.theme-gotham pre, .preview-content.theme-gotham ul, .preview-content.theme-gotham ol, .preview-content.theme-gotham dl, .preview-content.theme-gotham form, .preview-content.theme-gotham details, .preview-content.theme-gotham dl, .preview-content.theme-gotham blockquote, .preview-content.theme-gotham table, .preview-content.theme-gotham xmp, .preview-content.theme-gotham plaintext, .preview-content.theme-gotham listing, .preview-content.theme-gotham figure,
+.preview-content.theme-gotham pre[class*=language-] {
+  margin: 0.75em 0 0.45em;
+}
+.preview-content.theme-gotham hr {
+  margin: 0.75em auto;
+}
+.preview-content.theme-gotham ul ul, .preview-content.theme-gotham ul ol, .preview-content.theme-gotham ol ul, .preview-content.theme-gotham ol ol {
+  margin-bottom: 0px;
+}
+.preview-content.theme-gotham h1, .preview-content.theme-gotham h2, .preview-content.theme-gotham h3, .preview-content.theme-gotham h4, .preview-content.theme-gotham h5, .preview-content.theme-gotham h6 {
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  margin-left: 0;
+  margin-right: 0;
+  font-family: AvenirNext-Medium;
+  font-weight: 500;
+  line-height: 1.5em;
+  color: rgb(46, 184, 140);
+}
+.preview-content.theme-gotham h1 {
+  font-size: 1.5em;
+}
+.preview-content.theme-gotham h2 {
+  font-size: 1.3em;
+}
+.preview-content.theme-gotham h3 {
+  font-size: 1.1em;
+}
+.preview-content.theme-gotham h4 {
+  font-size: 1em;
+}
+.preview-content.theme-gotham h5 {
+  font-size: 1em;
+}
+.preview-content.theme-gotham h6 {
+  font-size: 1em;
+}
+.preview-content.theme-gotham hr {
+  height: 1px;
+  border: 0;
+  background-color: rgb(18, 42, 63);
+  border-style: inset;
+  border-width: 1px;
+}
+.preview-content.theme-gotham p {
+  margin-left: 0;
+  margin-right: 0;
+}
+.preview-content.theme-gotham pre, .preview-content.theme-gotham pre[class*=language-] {
+  padding: 0;
+  border: 0;
+}
+.preview-content.theme-gotham blockquote {
+  display: block;
+  padding-left: 0.8em;
+  border-left: 0.2em solid rgb(42, 168, 137);
+}
+.preview-content.theme-gotham blockquote > :first-child {
+  margin-top: 0;
+}
+.preview-content.theme-gotham blockquote > :last-child {
+  margin-bottom: 0;
+}
+.preview-content.theme-gotham li {
+  word-wrap: break-all;
+}
+.preview-content.theme-gotham ul, .preview-content.theme-gotham ol {
+  list-style: none;
+}
+.preview-content.theme-gotham ul {
+  margin-left: 1.3em;
+  padding: 0;
+}
+.preview-content.theme-gotham ol {
+  margin-left: 1.3em;
+  padding: 0;
+  counter-reset: ol_counter;
+}
+.preview-content.theme-gotham ul > li {
+  position: relative;
+}
+.preview-content.theme-gotham ul > li:before {
+  content: "•";
+  color: rgb(42, 168, 137);
+  position: absolute;
+  left: -1.1em;
+}
+.preview-content.theme-gotham ol > li {
+  position: relative;
+}
+.preview-content.theme-gotham ol > li:before {
+  content: counter(ol_counter) ".";
+  counter-increment: ol_counter;
+  color: rgb(42, 168, 137);
+  text-align: right;
+  min-width: 1em;
+  position: absolute;
+  left: -1.5em;
+}
+.preview-content.theme-gotham li + li {
+  margin-top: 0.25em;
+}
+.preview-content.theme-gotham ul ul, .preview-content.theme-gotham ol ul, .preview-content.theme-gotham ul ol, .preview-content.theme-gotham ol ol, .preview-content.theme-gotham li ul, .preview-content.theme-gotham li ol {
+  margin-top: 0.25em;
+  margin-left: 2em;
+}
+.preview-content.theme-gotham .task-list-item {
+  list-style-type: none;
+  text-indent: -1.5em;
+}
+.preview-content.theme-gotham .task-list-item:before {
+  content: "";
+  display: static;
+  margin-right: 0px;
+}
+.preview-content.theme-gotham .task-list-item > input[type=checkbox] {
+  text-indent: -1.7em;
+}
+.preview-content.theme-gotham img {
+  max-width: 100%;
+  height: auto;
+}
+.preview-content.theme-gotham u {
+  text-decoration: none;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgb(42, 168, 137) 50%);
+  background-repeat: repeat-x;
+  background-size: 2px 2px;
+  background-position: 0 1em;
+}
+.preview-content.theme-gotham a {
+  color: rgb(242, 130, 90);
+  text-decoration: none;
+}
+.preview-content.theme-gotham a:hover, .preview-content.theme-gotham a:focus, .preview-content.theme-gotham a:active {
+  text-decoration: underline;
+}
+.preview-content.theme-gotham a img {
+  border: none;
+}
+.preview-content.theme-gotham b, .preview-content.theme-gotham strong {
+  font-weight: bold;
+}
+.preview-content.theme-gotham i, .preview-content.theme-gotham cite, .preview-content.theme-gotham em, .preview-content.theme-gotham var, .preview-content.theme-gotham address, .preview-content.theme-gotham dfn {
+  font-style: italic;
+}
+.preview-content.theme-gotham del, .preview-content.theme-gotham s {
+  color: rgba(89, 156, 171, 0.7);
+}
+.preview-content.theme-gotham pre, .preview-content.theme-gotham xmp, .preview-content.theme-gotham plaintext, .preview-content.theme-gotham listing, .preview-content.theme-gotham code, .preview-content.theme-gotham kbd, .preview-content.theme-gotham tt, .preview-content.theme-gotham samp {
+  font-family: Menlo-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+.preview-content.theme-gotham code {
+  display: inline;
+  border: solid 1px rgb(18, 42, 63);
+  padding: 0.2em 0.5em;
+  font-size: 0.9em;
+  color: rgb(89, 156, 171);
+  background-color: rgb(10, 23, 34);
+}
+.preview-content.theme-gotham pre > code {
+  display: block;
+  border: solid 1px rgb(18, 42, 63);
+  padding: 0.7em 1em;
+  font-size: 0.9em;
+  overflow-x: auto;
+}
+.preview-content.theme-gotham mark {
+  color: inherit;
+  display: inline;
+  padding: 0.2em 0.5em;
+  background-color: rgb(43, 56, 79);
+}
+.preview-content.theme-gotham figcaption {
+  text-align: center;
+}
+.preview-content.theme-gotham table {
+  color: rgb(89, 156, 171);
+  border-collapse: collapse;
+  background-color: rgb(10, 23, 34);
+  border-spacing: 2px;
+  font-size: 1em;
+  border: 1px;
+  border-spacing: 0;
+}
+.preview-content.theme-gotham th, .preview-content.theme-gotham td {
+  padding: 0.7em 1em;
+  font-size: 0.9em;
+  border: 1px solid rgb(18, 42, 63);
+}
+.preview-content.theme-gotham caption, .preview-content.theme-gotham th, .preview-content.theme-gotham td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+.preview-content.theme-gotham div[id^=mweb-chart-ele] svg {
+  background-color: white;
+}
+.preview-content.theme-gotham .footnotes > ol li {
+  text-indent: 0;
+}
+.preview-content.theme-gotham .footnotes > ol li::before {
+  float: left;
+}

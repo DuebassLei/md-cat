@@ -1,0 +1,349 @@
+@charset "UTF-8";
+/*
+ * PrismJS default theme
+ * 这个文件只应该包含变量
+ */
+/*
+ * Default theme，适用于 core/mweb-base.scss。
+ * 取值参考 chrome 默认样式：
+ * https://chromium.googlesource.com/chromium/blink/+/refs/heads/main/Source/core/css/html.css
+ * 所有 import "core/mweb-base.scss" 的文件都应该同时导入此变量文件。
+ */
+/* color */
+/* font & line */
+/* boxing */
+/* elememts */
+/*
+ * 基准样式，相当于 reset.css，使主题在不同平台下有统一的表现。
+ * 各个属性的默认值为 chrome 的默认样式，见 variables/default.scss。
+ */
+/**
+ * PrismJS 的样式表。颜色全部用变量表示，方便后续切换不同的配色方案。
+ */
+/* PrismJS 1.23.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+.preview-content.theme-default code[class*=language-],
+.preview-content.theme-default pre[class*=language-] {
+  color: black;
+  background: none;
+  font-family: monospace, Menlo-Regular, Menlo, Monaco, Consolas, "Courier New";
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5em;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+.preview-content.theme-default pre[class*=language-]::-moz-selection, .preview-content.theme-default pre[class*=language-] ::-moz-selection,
+.preview-content.theme-default code[class*=language-]::-moz-selection, .preview-content.theme-default code[class*=language-] ::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+.preview-content.theme-default pre[class*=language-]::selection, .preview-content.theme-default pre[class*=language-] ::selection,
+.preview-content.theme-default code[class*=language-]::selection, .preview-content.theme-default code[class*=language-] ::selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+@media print {
+  .preview-content.theme-default code[class*=language-],
+  .preview-content.theme-default pre[class*=language-] {
+    text-shadow: none;
+  }
+}
+.preview-content.theme-default {
+  /* Code blocks */
+}
+.preview-content.theme-default pre[class*=language-] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+}
+.preview-content.theme-default :not(pre) > code[class*=language-],
+.preview-content.theme-default pre[class*=language-] {
+  background: #f5f2f0;
+}
+.preview-content.theme-default {
+  /* Inline code */
+}
+.preview-content.theme-default :not(pre) > code[class*=language-] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+.preview-content.theme-default .token.comment,
+.preview-content.theme-default .token.prolog,
+.preview-content.theme-default .token.doctype,
+.preview-content.theme-default .token.cdata {
+  color: slategray;
+}
+.preview-content.theme-default .token.punctuation {
+  color: #999;
+}
+.preview-content.theme-default .token.namespace {
+  opacity: 0.7;
+}
+.preview-content.theme-default .token.number,
+.preview-content.theme-default .token.boolean {
+  color: #905;
+}
+.preview-content.theme-default .token.property,
+.preview-content.theme-default .token.tag,
+.preview-content.theme-default .token.constant,
+.preview-content.theme-default .token.symbol,
+.preview-content.theme-default .token.deleted {
+  color: #905;
+}
+.preview-content.theme-default .token.selector,
+.preview-content.theme-default .token.string,
+.preview-content.theme-default .token.char,
+.preview-content.theme-default .token.builtin,
+.preview-content.theme-default .token.inserted {
+  color: #690;
+}
+.preview-content.theme-default .token.attr-name {
+  color: #690;
+}
+.preview-content.theme-default .token.char {
+  color: #690;
+}
+.preview-content.theme-default .token.operator,
+.preview-content.theme-default .token.entity,
+.preview-content.theme-default .token.url,
+.preview-content.theme-default .language-css .token.string,
+.preview-content.theme-default .style .token.string {
+  color: #9a6e3a;
+  background: none;
+}
+.preview-content.theme-default .token.atrule,
+.preview-content.theme-default .token.attr-value,
+.preview-content.theme-default .token.keyword {
+  color: #07a;
+}
+.preview-content.theme-default .token.function,
+.preview-content.theme-default .token.class-name {
+  color: #DD4A68;
+}
+.preview-content.theme-default .token.regex,
+.preview-content.theme-default .token.important,
+.preview-content.theme-default .token.variable {
+  color: #e90;
+}
+.preview-content.theme-default .token.important,
+.preview-content.theme-default .token.bold {
+  font-weight: bold;
+}
+.preview-content.theme-default .token.italic {
+  font-style: italic;
+}
+.preview-content.theme-default .token.entity {
+  cursor: help;
+}
+
+/**
+ * html、body 标签仅适用于 MWeb
+ * 在用于 juejin 等平台时，需要转为 .preview-content.theme-default，防止污染全局样式
+ */
+.preview-content.theme-default {
+  font-family: PingFang SC, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  font-size: 16px;
+  color: black;
+}
+
+.preview-content.theme-default {
+  background-color: white;
+}
+
+/**
+ * MWeb 包裹 markdown 的容器是 .preview-content.theme-default
+ * Typora 中是 #write
+ */
+.preview-content.theme-default {
+  line-height: 1.6em;
+  -webkit-text-size-adjust: 100%;
+  max-width: 46rem;
+  margin: 0px auto;
+  padding: 1.6rem 3.2rem;
+}
+.preview-content.theme-default * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.preview-content.theme-default > *:first-child {
+  margin-top: 0 !important;
+}
+.preview-content.theme-default > *:last-child {
+  margin-top: 0 !important;
+}
+.preview-content.theme-default {
+  /* spacing */
+}
+.preview-content.theme-default p, .preview-content.theme-default details, .preview-content.theme-default dl, .preview-content.theme-default ol, .preview-content.theme-default ul, .preview-content.theme-default pre, .preview-content.theme-default xmp, .preview-content.theme-default plaintext, .preview-content.theme-default listing, .preview-content.theme-default blockquote, .preview-content.theme-default table, .preview-content.theme-default figure, .preview-content.theme-default hr {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+.preview-content.theme-default {
+  /* block */
+}
+.preview-content.theme-default h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  margin-left: 0;
+  margin-right: 0;
+}
+.preview-content.theme-default h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  margin-left: 0;
+  margin-right: 0;
+}
+.preview-content.theme-default h3 {
+  font-size: 1.17em;
+  font-weight: bold;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  margin-left: 0;
+  margin-right: 0;
+}
+.preview-content.theme-default h4 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  margin-left: 0;
+  margin-right: 0;
+}
+.preview-content.theme-default h5 {
+  font-size: 0.83em;
+  font-weight: bold;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  margin-left: 0;
+  margin-right: 0;
+}
+.preview-content.theme-default h6 {
+  font-size: 0.67em;
+  font-weight: bold;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  margin-left: 0;
+  margin-right: 0;
+}
+.preview-content.theme-default p {
+  margin-left: 0;
+  margin-right: 0;
+}
+.preview-content.theme-default pre, .preview-content.theme-default xmp, .preview-content.theme-default plaintext, .preview-content.theme-default listing {
+  font-family: monospace, Menlo-Regular, Menlo, Monaco, Consolas, "Courier New";
+}
+.preview-content.theme-default blockquote > :first-child {
+  margin-top: 0;
+}
+.preview-content.theme-default blockquote > :last-child {
+  margin-bottom: 0;
+}
+.preview-content.theme-default hr {
+  border-style: inset;
+  border-width: 1px;
+}
+.preview-content.theme-default img {
+  max-width: 100%;
+  height: auto;
+}
+.preview-content.theme-default {
+  /* list */
+}
+.preview-content.theme-default li {
+  word-wrap: break-all;
+}
+.preview-content.theme-default li + li {
+  margin-top: 0.25em;
+}
+.preview-content.theme-default ul ul, .preview-content.theme-default ol ul, .preview-content.theme-default ul ol, .preview-content.theme-default ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.preview-content.theme-default .task-list-item {
+  list-style-type: none;
+}
+.preview-content.theme-default {
+  /* inline */
+}
+.preview-content.theme-default a {
+  color: -webkit-link;
+  text-decoration: underline;
+}
+.preview-content.theme-default a img {
+  border: none;
+}
+.preview-content.theme-default b, .preview-content.theme-default strong {
+  font-weight: bold;
+}
+.preview-content.theme-default i, .preview-content.theme-default cite, .preview-content.theme-default em, .preview-content.theme-default var, .preview-content.theme-default address, .preview-content.theme-default dfn {
+  font-style: italic;
+}
+.preview-content.theme-default code, .preview-content.theme-default kbd, .preview-content.theme-default tt, .preview-content.theme-default samp {
+  font-family: monospace, Menlo-Regular, Menlo, Monaco, Consolas, "Courier New";
+}
+.preview-content.theme-default mark {
+  padding: 0.2em 0;
+  background-color: yellow;
+}
+.preview-content.theme-default del, .preview-content.theme-default s {
+  color: inherit;
+}
+.preview-content.theme-default {
+  /* table */
+}
+.preview-content.theme-default table {
+  color: black;
+  border-collapse: collapse;
+  background-color: white;
+  border-spacing: 2px;
+  font-size: 1em;
+}
+.preview-content.theme-default th, .preview-content.theme-default td {
+  border-color: gray;
+  border-width: 1px;
+  border-style: solid;
+}
+.preview-content.theme-default th {
+  padding: 4px 8px;
+  font-size: 1em;
+  font-weight: bold;
+}
+.preview-content.theme-default td {
+  padding: 4px 8px;
+  font-size: 1em;
+  font-weight: normal;
+}
+.preview-content.theme-default {
+  /* svg */
+}
+.preview-content.theme-default div[id^=mweb-chart-ele] svg {
+  background-color: white;
+}
+
+.preview-content.theme-default .task-list-item + .task-list-item {
+  margin-top: 3px;
+}
+.preview-content.theme-default .task-list-item input {
+  margin: 0.3em 0 0.25em -1.6em;
+}

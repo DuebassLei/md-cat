@@ -3,7 +3,10 @@
     <div class="preview-header">
       <span>预览效果</span>
     </div>
-    <div class="preview-content-wrapper">
+    <div 
+      class="preview-content-wrapper"
+      :class="{ 'mweb-theme-active': isMwebTheme }"
+    >
       <div 
         class="preview-content"
         :class="[`theme-${theme}`]"
@@ -23,6 +26,12 @@ import katex from 'katex'
 import 'highlight.js/styles/atom-one-dark.css'
 import 'katex/dist/katex.css'
 
+// 导入 mweb-themes 默认样式（为所有主题提供基础样式）
+import '../themes/styles/mweb-default.css'
+
+// 导入主题加载器
+import { loadThemeStyle, isMwebTheme as checkIsMwebTheme } from '../utils/themeLoader.js'
+
 const props = defineProps({
   content: {
     type: String,
@@ -33,6 +42,9 @@ const props = defineProps({
     default: 'wechat'
   }
 })
+
+// 检查当前主题是否是 mweb-themes 主题
+const isMwebTheme = computed(() => checkIsMwebTheme(props.theme))
 
 // 配置 marked (v11 API)
 marked.setOptions({
@@ -231,6 +243,11 @@ const initCodeCopyButtons = () => {
   })
 }
 
+// 监听主题变化，动态加载主题样式
+watch(() => props.theme, (newTheme) => {
+  loadThemeStyle(newTheme)
+}, { immediate: true })
+
 watch(() => props.content, async () => {
   await nextTick()
   renderMermaid()
@@ -239,6 +256,8 @@ watch(() => props.content, async () => {
 })
 
 onMounted(() => {
+  // 加载当前主题样式
+  loadThemeStyle(props.theme)
   renderMermaid()
   renderKaTeX()
   initCodeCopyButtons()
@@ -282,6 +301,11 @@ body[data-theme-type="dark"] .preview-header {
   background: #fffef9;
   padding: 20px;
   transition: background-color 0.3s ease;
+}
+
+/* 当使用 mweb-themes 主题时，移除 wrapper 的 padding，让主题自己控制 */
+.preview-content-wrapper.mweb-theme-active {
+  padding: 0 !important;
 }
 
 body[data-theme-type="dark"] .preview-content-wrapper {

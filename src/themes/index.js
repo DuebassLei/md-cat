@@ -1,125 +1,238 @@
 // 主题配置
 export const themes = {
+  // 原有主题
   wechat: {
     label: '微信公众号',
     value: 'wechat',
     type: 'light',
-    icon: '📱',
-    description: '适合微信公众号文章排版'
-  },
-  aiarticle: {
-    label: 'AI文章',
-    value: 'aiarticle',
-    type: 'light',
-    icon: '🤖',
-    description: 'AI 生成文章风格，科技感十足'
-  },
-  readingnotes: {
-    label: '读书笔记',
-    value: 'readingnotes',
-    type: 'light',
-    icon: '📚',
-    description: '读书笔记风格，优雅阅读体验'
-  },
-  xiaohongshu: {
-    label: '小红书卡片',
-    value: 'xiaohongshu',
-    type: 'light',
-    icon: '📕',
-    description: '卡片式设计，渐变色标题'
+    icon: '💬',
+    description: '微信公众号风格主题'
   },
   github: {
     label: 'GitHub',
     value: 'github',
     type: 'light',
-    icon: '💻',
-    description: 'GitHub 风格，简洁专业'
+    icon: '🐙',
+    description: 'GitHub 风格主题'
   },
-  notion: {
-    label: 'Notion',
-    value: 'notion',
+  aiarticle: {
+    label: 'AI Article',
+    value: 'aiarticle',
+    type: 'light',
+    icon: '🤖',
+    description: 'AI 文章风格主题'
+  },
+  // mweb-themes 主题
+  ayu: {
+    label: 'Ayu',
+    value: 'ayu',
+    type: 'light',
+    icon: '🌅',
+    description: 'Ayu 主题，来自 mweb-themes'
+  },
+  bearDefault: {
+    label: 'Bear 默认',
+    value: 'bear-default',
+    type: 'light',
+    icon: '🐻',
+    description: 'Bear 默认 主题，来自 mweb-themes'
+  },
+  contrast: {
+    label: 'Contrast',
+    value: 'contrast',
+    type: 'light',
+    icon: '⚡',
+    description: 'Contrast 主题，来自 mweb-themes'
+  },
+  dBoring: {
+    label: 'D Boring',
+    value: 'd-boring',
+    type: 'light',
+    icon: '📄',
+    description: 'D Boring 主题，来自 mweb-themes'
+  },
+  default: {
+    label: 'Default',
+    value: 'default',
     type: 'light',
     icon: '📝',
-    description: 'Notion 风格，现代简洁'
+    description: 'Default 主题，来自 mweb-themes'
   },
-  typora: {
-    label: 'Typora',
-    value: 'typora',
+  duotoneHeat: {
+    label: 'Duotone Heat',
+    value: 'duotone-heat',
+    type: 'light',
+    icon: '🔥',
+    description: 'Duotone Heat 主题，来自 mweb-themes'
+  },
+  duotoneLight: {
+    label: 'Duotone Light',
+    value: 'duotone-light',
+    type: 'light',
+    icon: '💡',
+    description: 'Duotone Light 主题，来自 mweb-themes'
+  },
+  gandalf: {
+    label: 'Gandalf',
+    value: 'gandalf',
+    type: 'light',
+    icon: '🧙',
+    description: 'Gandalf 主题，来自 mweb-themes'
+  },
+  indigo: {
+    label: 'Indigo',
+    value: 'indigo',
+    type: 'light',
+    icon: '💜',
+    description: 'Indigo 主题，来自 mweb-themes'
+  },
+  jzman: {
+    label: 'Jzman',
+    value: 'jzman',
+    type: 'light',
+    icon: '📚',
+    description: 'Jzman 主题，来自 mweb-themes'
+  },
+  lark: {
+    label: 'Lark',
+    value: 'lark',
+    type: 'light',
+    icon: '📋',
+    description: 'Lark 主题，来自 mweb-themes'
+  },
+  oliveDunk: {
+    label: 'Olive Dunk',
+    value: 'olive-dunk',
+    type: 'light',
+    icon: '🫒',
+    description: 'Olive Dunk 主题，来自 mweb-themes'
+  },
+  redGraphite: {
+    label: 'Red Graphite',
+    value: 'red-graphite',
+    type: 'light',
+    icon: '🔴',
+    description: 'Red Graphite 主题，来自 mweb-themes'
+  },
+  smartblue: {
+    label: 'Smart Blue',
+    value: 'smartblue',
+    type: 'light',
+    icon: '💙',
+    description: 'Smart Blue 主题，来自 mweb-themes'
+  },
+  solarizedLight: {
+    label: 'Solarized Light',
+    value: 'solarized-light',
+    type: 'light',
+    icon: '☀️',
+    description: 'Solarized Light 主题，来自 mweb-themes'
+  },
+  typo: {
+    label: 'Typo',
+    value: 'typo',
     type: 'light',
     icon: '✍️',
-    description: 'Typora 风格，优雅阅读'
+    description: 'Typo 主题，来自 mweb-themes'
   },
-  dark: {
-    label: '暗色主题',
-    value: 'dark',
+  vGreen: {
+    label: 'V Green',
+    value: 'v-green',
+    type: 'light',
+    icon: '💚',
+    description: 'V Green 主题，来自 mweb-themes'
+  },
+  vue: {
+    label: 'Vue',
+    value: 'vue',
+    type: 'light',
+    icon: '🟢',
+    description: 'Vue 主题，来自 mweb-themes'
+  },
+  ayuMirage: {
+    label: 'Ayu Mirage',
+    value: 'ayu-mirage',
     type: 'dark',
-    icon: '🌙',
-    description: '护眼暗色模式'
+    icon: '🌃',
+    description: 'Ayu Mirage 主题，来自 mweb-themes'
+  },
+  charcoal: {
+    label: 'Charcoal',
+    value: 'charcoal',
+    type: 'dark',
+    icon: '🪨',
+    description: 'Charcoal 主题，来自 mweb-themes'
+  },
+  cobalt: {
+    label: 'Cobalt',
+    value: 'cobalt',
+    type: 'dark',
+    icon: '🔵',
+    description: 'Cobalt 主题，来自 mweb-themes'
+  },
+  darkGraphite: {
+    label: 'Dark Graphite',
+    value: 'dark-graphite',
+    type: 'dark',
+    icon: '⚫',
+    description: 'Dark Graphite 主题，来自 mweb-themes'
+  },
+  dieci: {
+    label: 'Dieci',
+    value: 'dieci',
+    type: 'dark',
+    icon: '🌑',
+    description: 'Dieci 主题，来自 mweb-themes'
   },
   dracula: {
     label: 'Dracula',
     value: 'dracula',
     type: 'dark',
     icon: '🧛',
-    description: 'Dracula 暗色主题'
+    description: 'Dracula 主题，来自 mweb-themes'
   },
-  material: {
-    label: 'Material',
-    value: 'material',
-    type: 'light',
-    icon: '🎨',
-    description: 'Material Design 风格'
+  gotham: {
+    label: 'Gotham',
+    value: 'gotham',
+    type: 'dark',
+    icon: '🦇',
+    description: 'Gotham 主题，来自 mweb-themes'
   },
-  // doocs/md 主题系列
-  doocs: {
-    label: 'Doocs 简约',
-    value: 'doocs',
-    type: 'light',
-    icon: '✨',
-    description: 'doocs/md 简约风格'
+  lighthouse: {
+    label: 'Lighthouse',
+    value: 'lighthouse',
+    type: 'dark',
+    icon: '🗼',
+    description: 'Lighthouse 主题，来自 mweb-themes'
   },
-  doocsTech: {
-    label: 'Doocs 科技',
-    value: 'doocsTech',
-    type: 'light',
-    icon: '⚡',
-    description: 'doocs/md 科技风格'
-  },
-  doocsArt: {
-    label: 'Doocs 文艺',
-    value: 'doocsArt',
-    type: 'light',
-    icon: '🎭',
-    description: 'doocs/md 文艺风格'
-  },
-  doocsBusiness: {
-    label: 'Doocs 商务',
-    value: 'doocsBusiness',
-    type: 'light',
-    icon: '💼',
-    description: 'doocs/md 商务风格'
-  },
-  doocsFresh: {
-    label: 'Doocs 清新',
-    value: 'doocsFresh',
-    type: 'light',
-    icon: '🌿',
-    description: 'doocs/md 清新风格'
-  },
-  doocsWarm: {
-    label: 'Doocs 温暖',
-    value: 'doocsWarm',
-    type: 'light',
-    icon: '☀️',
-    description: 'doocs/md 温暖风格'
-  },
-  doocsCool: {
-    label: 'Doocs 冷色',
-    value: 'doocsCool',
-    type: 'light',
+  nord: {
+    label: 'Nord',
+    value: 'nord',
+    type: 'dark',
     icon: '❄️',
-    description: 'doocs/md 冷色风格'
-  }
+    description: 'Nord 主题，来自 mweb-themes'
+  },
+  panic: {
+    label: 'Panic',
+    value: 'panic',
+    type: 'dark',
+    icon: '🚨',
+    description: 'Panic 主题，来自 mweb-themes'
+  },
+  solarizedDark: {
+    label: 'Solarized Dark',
+    value: 'solarized-dark',
+    type: 'dark',
+    icon: '🌙',
+    description: 'Solarized Dark 主题，来自 mweb-themes'
+  },
+  toothpaste: {
+    label: 'Toothpaste',
+    value: 'toothpaste',
+    type: 'dark',
+    icon: '🦷',
+    description: 'Toothpaste 主题，来自 mweb-themes'
+  },
 }
 
 export const getThemeList = () => {
@@ -134,5 +247,10 @@ export const getThemeList = () => {
 
 export const getTheme = (value) => {
   return themes[value] || themes.wechat
+}
+
+// 将主题键名转换为驼峰命名
+export const getThemeKey = (value) => {
+  return value.replace(/-([a-z])/g, (g) => g[1].toUpperCase())
 }
 

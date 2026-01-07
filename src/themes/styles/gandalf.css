@@ -1,0 +1,389 @@
+@charset "UTF-8";
+/*
+ * PrismJS default theme
+ * 这个文件只应该包含变量
+ */
+/*
+ * Default bear theme，适用于 core/mweb-bear.scss。
+ * 所有 bear 主题，只需 import 这个文件，然后修改配色方案即可。
+ */
+/* font */
+/* container */
+/*  spacing */
+/* color */
+/* other */
+/**
+ * 在 bear 的主题中，某些变量的取值和其他变量是绑定的。
+ * 统一写在这里，这个文件应该在变量文件的最后被引入。
+ */
+/**
+ * Bear 的默认样式表。通过调整各个颜色变量的取值，就可以得到不同的 bear 主题。
+ * Bear 的配色方案位于 src/themes/bear-palettes 目录下。
+ */
+/**
+ * PrismJS 的样式表。颜色全部用变量表示，方便后续切换不同的配色方案。
+ */
+/* PrismJS 1.23.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+.preview-content.theme-gandalf code[class*=language-],
+.preview-content.theme-gandalf pre[class*=language-] {
+  color: rgb(69, 82, 96);
+  background: none;
+  font-family: Menlo-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5rem;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+.preview-content.theme-gandalf pre[class*=language-]::-moz-selection, .preview-content.theme-gandalf pre[class*=language-] ::-moz-selection,
+.preview-content.theme-gandalf code[class*=language-]::-moz-selection, .preview-content.theme-gandalf code[class*=language-] ::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+.preview-content.theme-gandalf pre[class*=language-]::selection, .preview-content.theme-gandalf pre[class*=language-] ::selection,
+.preview-content.theme-gandalf code[class*=language-]::selection, .preview-content.theme-gandalf code[class*=language-] ::selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+@media print {
+  .preview-content.theme-gandalf code[class*=language-],
+  .preview-content.theme-gandalf pre[class*=language-] {
+    text-shadow: none;
+  }
+}
+.preview-content.theme-gandalf {
+  /* Code blocks */
+}
+.preview-content.theme-gandalf pre[class*=language-] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+}
+.preview-content.theme-gandalf :not(pre) > code[class*=language-],
+.preview-content.theme-gandalf pre[class*=language-] {
+  background: rgb(248, 247, 249);
+}
+.preview-content.theme-gandalf {
+  /* Inline code */
+}
+.preview-content.theme-gandalf :not(pre) > code[class*=language-] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+.preview-content.theme-gandalf .token.comment,
+.preview-content.theme-gandalf .token.prolog,
+.preview-content.theme-gandalf .token.doctype,
+.preview-content.theme-gandalf .token.cdata {
+  color: rgb(124, 130, 145);
+}
+.preview-content.theme-gandalf .token.punctuation {
+  color: #999;
+}
+.preview-content.theme-gandalf .token.namespace {
+  opacity: 0.7;
+}
+.preview-content.theme-gandalf .token.number,
+.preview-content.theme-gandalf .token.boolean {
+  color: rgb(78, 127, 27);
+}
+.preview-content.theme-gandalf .token.property,
+.preview-content.theme-gandalf .token.tag,
+.preview-content.theme-gandalf .token.constant,
+.preview-content.theme-gandalf .token.symbol,
+.preview-content.theme-gandalf .token.deleted {
+  color: #905;
+}
+.preview-content.theme-gandalf .token.selector,
+.preview-content.theme-gandalf .token.string,
+.preview-content.theme-gandalf .token.char,
+.preview-content.theme-gandalf .token.builtin,
+.preview-content.theme-gandalf .token.inserted {
+  color: rgb(195, 73, 0);
+}
+.preview-content.theme-gandalf .token.attr-name {
+  color: rgb(195, 73, 0);
+}
+.preview-content.theme-gandalf .token.char {
+  color: rgb(195, 73, 0);
+}
+.preview-content.theme-gandalf .token.operator,
+.preview-content.theme-gandalf .token.entity,
+.preview-content.theme-gandalf .token.url,
+.preview-content.theme-gandalf .language-css .token.string,
+.preview-content.theme-gandalf .style .token.string {
+  color: #920448;
+  background: none;
+}
+.preview-content.theme-gandalf .token.atrule,
+.preview-content.theme-gandalf .token.attr-value,
+.preview-content.theme-gandalf .token.keyword {
+  color: rgb(169, 68, 170);
+}
+.preview-content.theme-gandalf .token.function,
+.preview-content.theme-gandalf .token.class-name {
+  color: rgb(169, 68, 170);
+}
+.preview-content.theme-gandalf .token.regex,
+.preview-content.theme-gandalf .token.important,
+.preview-content.theme-gandalf .token.variable {
+  color: #0E73A2;
+}
+.preview-content.theme-gandalf .token.important,
+.preview-content.theme-gandalf .token.bold {
+  font-weight: bold;
+}
+.preview-content.theme-gandalf .token.italic {
+  font-style: italic;
+}
+.preview-content.theme-gandalf .token.entity {
+  cursor: help;
+}
+
+.preview-content.theme-gandalf {
+  font-family: AvenirNext-Regular, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  font-size: 16px;
+  color: rgb(69, 82, 96);
+}
+
+.preview-content.theme-gandalf {
+  background-color: rgb(240, 240, 240);
+  line-height: 1.6em;
+  -webkit-text-size-adjust: 100%;
+  max-width: 46rem;
+  margin: 0px auto;
+  padding: 1.6em 3.2em;
+}
+
+.preview-content.theme-gandalf * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.preview-content.theme-gandalf > *:first-child {
+  margin-top: 0 !important;
+}
+.preview-content.theme-gandalf > *:last-child {
+  margin-top: 0 !important;
+}
+.preview-content.theme-gandalf p, .preview-content.theme-gandalf pre, .preview-content.theme-gandalf ul, .preview-content.theme-gandalf ol, .preview-content.theme-gandalf dl, .preview-content.theme-gandalf form, .preview-content.theme-gandalf details, .preview-content.theme-gandalf dl, .preview-content.theme-gandalf blockquote, .preview-content.theme-gandalf table, .preview-content.theme-gandalf xmp, .preview-content.theme-gandalf plaintext, .preview-content.theme-gandalf listing, .preview-content.theme-gandalf figure,
+.preview-content.theme-gandalf pre[class*=language-] {
+  margin: 0.75em 0 0.45em;
+}
+.preview-content.theme-gandalf hr {
+  margin: 0.75em auto;
+}
+.preview-content.theme-gandalf ul ul, .preview-content.theme-gandalf ul ol, .preview-content.theme-gandalf ol ul, .preview-content.theme-gandalf ol ol {
+  margin-bottom: 0px;
+}
+.preview-content.theme-gandalf h1, .preview-content.theme-gandalf h2, .preview-content.theme-gandalf h3, .preview-content.theme-gandalf h4, .preview-content.theme-gandalf h5, .preview-content.theme-gandalf h6 {
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  margin-left: 0;
+  margin-right: 0;
+  font-family: AvenirNext-Medium;
+  font-weight: 500;
+  line-height: 1.5em;
+  color: rgb(61, 81, 109);
+}
+.preview-content.theme-gandalf h1 {
+  font-size: 1.5em;
+}
+.preview-content.theme-gandalf h2 {
+  font-size: 1.3em;
+}
+.preview-content.theme-gandalf h3 {
+  font-size: 1.1em;
+}
+.preview-content.theme-gandalf h4 {
+  font-size: 1em;
+}
+.preview-content.theme-gandalf h5 {
+  font-size: 1em;
+}
+.preview-content.theme-gandalf h6 {
+  font-size: 1em;
+}
+.preview-content.theme-gandalf hr {
+  height: 1px;
+  border: 0;
+  background-color: rgb(200, 205, 218);
+  border-style: inset;
+  border-width: 1px;
+}
+.preview-content.theme-gandalf p {
+  margin-left: 0;
+  margin-right: 0;
+}
+.preview-content.theme-gandalf pre, .preview-content.theme-gandalf pre[class*=language-] {
+  padding: 0;
+  border: 0;
+}
+.preview-content.theme-gandalf blockquote {
+  display: block;
+  padding-left: 0.8em;
+  border-left: 0.2em solid rgb(160, 76, 107);
+}
+.preview-content.theme-gandalf blockquote > :first-child {
+  margin-top: 0;
+}
+.preview-content.theme-gandalf blockquote > :last-child {
+  margin-bottom: 0;
+}
+.preview-content.theme-gandalf li {
+  word-wrap: break-all;
+}
+.preview-content.theme-gandalf ul, .preview-content.theme-gandalf ol {
+  list-style: none;
+}
+.preview-content.theme-gandalf ul {
+  margin-left: 1.3em;
+  padding: 0;
+}
+.preview-content.theme-gandalf ol {
+  margin-left: 1.3em;
+  padding: 0;
+  counter-reset: ol_counter;
+}
+.preview-content.theme-gandalf ul > li {
+  position: relative;
+}
+.preview-content.theme-gandalf ul > li:before {
+  content: "•";
+  color: rgb(160, 76, 107);
+  position: absolute;
+  left: -1.1em;
+}
+.preview-content.theme-gandalf ol > li {
+  position: relative;
+}
+.preview-content.theme-gandalf ol > li:before {
+  content: counter(ol_counter) ".";
+  counter-increment: ol_counter;
+  color: rgb(160, 76, 107);
+  text-align: right;
+  min-width: 1em;
+  position: absolute;
+  left: -1.5em;
+}
+.preview-content.theme-gandalf li + li {
+  margin-top: 0.25em;
+}
+.preview-content.theme-gandalf ul ul, .preview-content.theme-gandalf ol ul, .preview-content.theme-gandalf ul ol, .preview-content.theme-gandalf ol ol, .preview-content.theme-gandalf li ul, .preview-content.theme-gandalf li ol {
+  margin-top: 0.25em;
+  margin-left: 2em;
+}
+.preview-content.theme-gandalf .task-list-item {
+  list-style-type: none;
+  text-indent: -1.5em;
+}
+.preview-content.theme-gandalf .task-list-item:before {
+  content: "";
+  display: static;
+  margin-right: 0px;
+}
+.preview-content.theme-gandalf .task-list-item > input[type=checkbox] {
+  text-indent: -1.7em;
+}
+.preview-content.theme-gandalf img {
+  max-width: 100%;
+  height: auto;
+}
+.preview-content.theme-gandalf u {
+  text-decoration: none;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgb(160, 76, 107) 50%);
+  background-repeat: repeat-x;
+  background-size: 2px 2px;
+  background-position: 0 1em;
+}
+.preview-content.theme-gandalf a {
+  color: rgb(128, 57, 75);
+  text-decoration: none;
+}
+.preview-content.theme-gandalf a:hover, .preview-content.theme-gandalf a:focus, .preview-content.theme-gandalf a:active {
+  text-decoration: underline;
+}
+.preview-content.theme-gandalf a img {
+  border: none;
+}
+.preview-content.theme-gandalf b, .preview-content.theme-gandalf strong {
+  font-weight: bold;
+}
+.preview-content.theme-gandalf i, .preview-content.theme-gandalf cite, .preview-content.theme-gandalf em, .preview-content.theme-gandalf var, .preview-content.theme-gandalf address, .preview-content.theme-gandalf dfn {
+  font-style: italic;
+}
+.preview-content.theme-gandalf del, .preview-content.theme-gandalf s {
+  color: rgba(69, 82, 96, 0.7);
+}
+.preview-content.theme-gandalf pre, .preview-content.theme-gandalf xmp, .preview-content.theme-gandalf plaintext, .preview-content.theme-gandalf listing, .preview-content.theme-gandalf code, .preview-content.theme-gandalf kbd, .preview-content.theme-gandalf tt, .preview-content.theme-gandalf samp {
+  font-family: Menlo-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+.preview-content.theme-gandalf code {
+  display: inline;
+  border: solid 1px rgb(200, 205, 218);
+  padding: 0.2em 0.5em;
+  font-size: 0.9em;
+  color: rgb(62, 74, 98);
+  background-color: rgb(248, 247, 249);
+}
+.preview-content.theme-gandalf pre > code {
+  display: block;
+  border: solid 1px rgb(200, 205, 218);
+  padding: 0.7em 1em;
+  font-size: 0.9em;
+  overflow-x: auto;
+}
+.preview-content.theme-gandalf mark {
+  color: inherit;
+  display: inline;
+  padding: 0.2em 0.5em;
+  background-color: rgb(211, 255, 164);
+}
+.preview-content.theme-gandalf figcaption {
+  text-align: center;
+}
+.preview-content.theme-gandalf table {
+  color: rgb(62, 74, 98);
+  border-collapse: collapse;
+  background-color: rgb(248, 247, 249);
+  border-spacing: 2px;
+  font-size: 1em;
+  border: 1px;
+  border-spacing: 0;
+}
+.preview-content.theme-gandalf th, .preview-content.theme-gandalf td {
+  padding: 0.7em 1em;
+  font-size: 0.9em;
+  border: 1px solid rgb(200, 205, 218);
+}
+.preview-content.theme-gandalf caption, .preview-content.theme-gandalf th, .preview-content.theme-gandalf td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+.preview-content.theme-gandalf div[id^=mweb-chart-ele] svg {
+  background-color: white;
+}
+.preview-content.theme-gandalf .footnotes > ol li {
+  text-indent: 0;
+}
+.preview-content.theme-gandalf .footnotes > ol li::before {
+  float: left;
+}

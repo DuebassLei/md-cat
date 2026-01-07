@@ -1,0 +1,389 @@
+@charset "UTF-8";
+/*
+ * PrismJS default theme
+ * 这个文件只应该包含变量
+ */
+/*
+ * Default bear theme，适用于 core/mweb-bear.scss。
+ * 所有 bear 主题，只需 import 这个文件，然后修改配色方案即可。
+ */
+/* font */
+/* container */
+/*  spacing */
+/* color */
+/* other */
+/**
+ * 在 bear 的主题中，某些变量的取值和其他变量是绑定的。
+ * 统一写在这里，这个文件应该在变量文件的最后被引入。
+ */
+/**
+ * Bear 的默认样式表。通过调整各个颜色变量的取值，就可以得到不同的 bear 主题。
+ * Bear 的配色方案位于 src/themes/bear-palettes 目录下。
+ */
+/**
+ * PrismJS 的样式表。颜色全部用变量表示，方便后续切换不同的配色方案。
+ */
+/* PrismJS 1.23.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+.preview-content.theme-red-graphite code[class*=language-],
+.preview-content.theme-red-graphite pre[class*=language-] {
+  color: #222222;
+  background: none;
+  font-family: Menlo-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5rem;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+.preview-content.theme-red-graphite pre[class*=language-]::-moz-selection, .preview-content.theme-red-graphite pre[class*=language-] ::-moz-selection,
+.preview-content.theme-red-graphite code[class*=language-]::-moz-selection, .preview-content.theme-red-graphite code[class*=language-] ::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+.preview-content.theme-red-graphite pre[class*=language-]::selection, .preview-content.theme-red-graphite pre[class*=language-] ::selection,
+.preview-content.theme-red-graphite code[class*=language-]::selection, .preview-content.theme-red-graphite code[class*=language-] ::selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+@media print {
+  .preview-content.theme-red-graphite code[class*=language-],
+  .preview-content.theme-red-graphite pre[class*=language-] {
+    text-shadow: none;
+  }
+}
+.preview-content.theme-red-graphite {
+  /* Code blocks */
+}
+.preview-content.theme-red-graphite pre[class*=language-] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+}
+.preview-content.theme-red-graphite :not(pre) > code[class*=language-],
+.preview-content.theme-red-graphite pre[class*=language-] {
+  background: white;
+}
+.preview-content.theme-red-graphite {
+  /* Inline code */
+}
+.preview-content.theme-red-graphite :not(pre) > code[class*=language-] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+.preview-content.theme-red-graphite .token.comment,
+.preview-content.theme-red-graphite .token.prolog,
+.preview-content.theme-red-graphite .token.doctype,
+.preview-content.theme-red-graphite .token.cdata {
+  color: #575757;
+}
+.preview-content.theme-red-graphite .token.punctuation {
+  color: #999;
+}
+.preview-content.theme-red-graphite .token.namespace {
+  opacity: 0.7;
+}
+.preview-content.theme-red-graphite .token.number,
+.preview-content.theme-red-graphite .token.boolean {
+  color: #0b5d83;
+}
+.preview-content.theme-red-graphite .token.property,
+.preview-content.theme-red-graphite .token.tag,
+.preview-content.theme-red-graphite .token.constant,
+.preview-content.theme-red-graphite .token.symbol,
+.preview-content.theme-red-graphite .token.deleted {
+  color: #905;
+}
+.preview-content.theme-red-graphite .token.selector,
+.preview-content.theme-red-graphite .token.string,
+.preview-content.theme-red-graphite .token.char,
+.preview-content.theme-red-graphite .token.builtin,
+.preview-content.theme-red-graphite .token.inserted {
+  color: #b43d15;
+}
+.preview-content.theme-red-graphite .token.attr-name {
+  color: #b43d15;
+}
+.preview-content.theme-red-graphite .token.char {
+  color: #b43d15;
+}
+.preview-content.theme-red-graphite .token.operator,
+.preview-content.theme-red-graphite .token.entity,
+.preview-content.theme-red-graphite .token.url,
+.preview-content.theme-red-graphite .language-css .token.string,
+.preview-content.theme-red-graphite .style .token.string {
+  color: #920448;
+  background: none;
+}
+.preview-content.theme-red-graphite .token.atrule,
+.preview-content.theme-red-graphite .token.attr-value,
+.preview-content.theme-red-graphite .token.keyword {
+  color: #2478c5;
+}
+.preview-content.theme-red-graphite .token.function,
+.preview-content.theme-red-graphite .token.class-name {
+  color: #2478c5;
+}
+.preview-content.theme-red-graphite .token.regex,
+.preview-content.theme-red-graphite .token.important,
+.preview-content.theme-red-graphite .token.variable {
+  color: #0E73A2;
+}
+.preview-content.theme-red-graphite .token.important,
+.preview-content.theme-red-graphite .token.bold {
+  font-weight: bold;
+}
+.preview-content.theme-red-graphite .token.italic {
+  font-style: italic;
+}
+.preview-content.theme-red-graphite .token.entity {
+  cursor: help;
+}
+
+.preview-content.theme-red-graphite {
+  font-family: AvenirNext-Regular, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  font-size: 16px;
+  color: #222222;
+}
+
+.preview-content.theme-red-graphite {
+  background-color: #fcfcfc;
+  line-height: 1.6em;
+  -webkit-text-size-adjust: 100%;
+  max-width: 46rem;
+  margin: 0px auto;
+  padding: 1.6em 3.2em;
+}
+
+.preview-content.theme-red-graphite * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.preview-content.theme-red-graphite > *:first-child {
+  margin-top: 0 !important;
+}
+.preview-content.theme-red-graphite > *:last-child {
+  margin-top: 0 !important;
+}
+.preview-content.theme-red-graphite p, .preview-content.theme-red-graphite pre, .preview-content.theme-red-graphite ul, .preview-content.theme-red-graphite ol, .preview-content.theme-red-graphite dl, .preview-content.theme-red-graphite form, .preview-content.theme-red-graphite details, .preview-content.theme-red-graphite dl, .preview-content.theme-red-graphite blockquote, .preview-content.theme-red-graphite table, .preview-content.theme-red-graphite xmp, .preview-content.theme-red-graphite plaintext, .preview-content.theme-red-graphite listing, .preview-content.theme-red-graphite figure,
+.preview-content.theme-red-graphite pre[class*=language-] {
+  margin: 0.75em 0 0.45em;
+}
+.preview-content.theme-red-graphite hr {
+  margin: 0.75em auto;
+}
+.preview-content.theme-red-graphite ul ul, .preview-content.theme-red-graphite ul ol, .preview-content.theme-red-graphite ol ul, .preview-content.theme-red-graphite ol ol {
+  margin-bottom: 0px;
+}
+.preview-content.theme-red-graphite h1, .preview-content.theme-red-graphite h2, .preview-content.theme-red-graphite h3, .preview-content.theme-red-graphite h4, .preview-content.theme-red-graphite h5, .preview-content.theme-red-graphite h6 {
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  margin-left: 0;
+  margin-right: 0;
+  font-family: AvenirNext-Medium;
+  font-weight: 500;
+  line-height: 1.5em;
+  color: #262626;
+}
+.preview-content.theme-red-graphite h1 {
+  font-size: 1.5em;
+}
+.preview-content.theme-red-graphite h2 {
+  font-size: 1.3em;
+}
+.preview-content.theme-red-graphite h3 {
+  font-size: 1.1em;
+}
+.preview-content.theme-red-graphite h4 {
+  font-size: 1em;
+}
+.preview-content.theme-red-graphite h5 {
+  font-size: 1em;
+}
+.preview-content.theme-red-graphite h6 {
+  font-size: 1em;
+}
+.preview-content.theme-red-graphite hr {
+  height: 1px;
+  border: 0;
+  background-color: #bfbfbf;
+  border-style: inset;
+  border-width: 1px;
+}
+.preview-content.theme-red-graphite p {
+  margin-left: 0;
+  margin-right: 0;
+}
+.preview-content.theme-red-graphite pre, .preview-content.theme-red-graphite pre[class*=language-] {
+  padding: 0;
+  border: 0;
+}
+.preview-content.theme-red-graphite blockquote {
+  display: block;
+  padding-left: 0.8em;
+  border-left: 0.2em solid #e06e73;
+}
+.preview-content.theme-red-graphite blockquote > :first-child {
+  margin-top: 0;
+}
+.preview-content.theme-red-graphite blockquote > :last-child {
+  margin-bottom: 0;
+}
+.preview-content.theme-red-graphite li {
+  word-wrap: break-all;
+}
+.preview-content.theme-red-graphite ul, .preview-content.theme-red-graphite ol {
+  list-style: none;
+}
+.preview-content.theme-red-graphite ul {
+  margin-left: 1.3em;
+  padding: 0;
+}
+.preview-content.theme-red-graphite ol {
+  margin-left: 1.3em;
+  padding: 0;
+  counter-reset: ol_counter;
+}
+.preview-content.theme-red-graphite ul > li {
+  position: relative;
+}
+.preview-content.theme-red-graphite ul > li:before {
+  content: "•";
+  color: #e06e73;
+  position: absolute;
+  left: -1.1em;
+}
+.preview-content.theme-red-graphite ol > li {
+  position: relative;
+}
+.preview-content.theme-red-graphite ol > li:before {
+  content: counter(ol_counter) ".";
+  counter-increment: ol_counter;
+  color: #e06e73;
+  text-align: right;
+  min-width: 1em;
+  position: absolute;
+  left: -1.5em;
+}
+.preview-content.theme-red-graphite li + li {
+  margin-top: 0.25em;
+}
+.preview-content.theme-red-graphite ul ul, .preview-content.theme-red-graphite ol ul, .preview-content.theme-red-graphite ul ol, .preview-content.theme-red-graphite ol ol, .preview-content.theme-red-graphite li ul, .preview-content.theme-red-graphite li ol {
+  margin-top: 0.25em;
+  margin-left: 2em;
+}
+.preview-content.theme-red-graphite .task-list-item {
+  list-style-type: none;
+  text-indent: -1.5em;
+}
+.preview-content.theme-red-graphite .task-list-item:before {
+  content: "";
+  display: static;
+  margin-right: 0px;
+}
+.preview-content.theme-red-graphite .task-list-item > input[type=checkbox] {
+  text-indent: -1.7em;
+}
+.preview-content.theme-red-graphite img {
+  max-width: 100%;
+  height: auto;
+}
+.preview-content.theme-red-graphite u {
+  text-decoration: none;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #e06e73 50%);
+  background-repeat: repeat-x;
+  background-size: 2px 2px;
+  background-position: 0 1em;
+}
+.preview-content.theme-red-graphite a {
+  color: #de4c4f;
+  text-decoration: none;
+}
+.preview-content.theme-red-graphite a:hover, .preview-content.theme-red-graphite a:focus, .preview-content.theme-red-graphite a:active {
+  text-decoration: underline;
+}
+.preview-content.theme-red-graphite a img {
+  border: none;
+}
+.preview-content.theme-red-graphite b, .preview-content.theme-red-graphite strong {
+  font-weight: bold;
+}
+.preview-content.theme-red-graphite i, .preview-content.theme-red-graphite cite, .preview-content.theme-red-graphite em, .preview-content.theme-red-graphite var, .preview-content.theme-red-graphite address, .preview-content.theme-red-graphite dfn {
+  font-style: italic;
+}
+.preview-content.theme-red-graphite del, .preview-content.theme-red-graphite s {
+  color: #525252;
+}
+.preview-content.theme-red-graphite pre, .preview-content.theme-red-graphite xmp, .preview-content.theme-red-graphite plaintext, .preview-content.theme-red-graphite listing, .preview-content.theme-red-graphite code, .preview-content.theme-red-graphite kbd, .preview-content.theme-red-graphite tt, .preview-content.theme-red-graphite samp {
+  font-family: Menlo-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+.preview-content.theme-red-graphite code {
+  display: inline;
+  border: solid 1px #bfbfbf;
+  padding: 0.2em 0.5em;
+  font-size: 0.9em;
+  color: #424242;
+  background-color: white;
+}
+.preview-content.theme-red-graphite pre > code {
+  display: block;
+  border: solid 1px #bfbfbf;
+  padding: 0.7em 1em;
+  font-size: 0.9em;
+  overflow-x: auto;
+}
+.preview-content.theme-red-graphite mark {
+  color: inherit;
+  display: inline;
+  padding: 0.2em 0.5em;
+  background-color: #fcffc0;
+}
+.preview-content.theme-red-graphite figcaption {
+  text-align: center;
+}
+.preview-content.theme-red-graphite table {
+  color: #424242;
+  border-collapse: collapse;
+  background-color: white;
+  border-spacing: 2px;
+  font-size: 1em;
+  border: 1px;
+  border-spacing: 0;
+}
+.preview-content.theme-red-graphite th, .preview-content.theme-red-graphite td {
+  padding: 0.7em 1em;
+  font-size: 0.9em;
+  border: 1px solid #bfbfbf;
+}
+.preview-content.theme-red-graphite caption, .preview-content.theme-red-graphite th, .preview-content.theme-red-graphite td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+.preview-content.theme-red-graphite div[id^=mweb-chart-ele] svg {
+  background-color: white;
+}
+.preview-content.theme-red-graphite .footnotes > ol li {
+  text-indent: 0;
+}
+.preview-content.theme-red-graphite .footnotes > ol li::before {
+  float: left;
+}

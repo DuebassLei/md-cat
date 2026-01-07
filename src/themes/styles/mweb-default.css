@@ -1,0 +1,342 @@
+/* mweb-themes 默认样式 - 用于没有专门 CSS 文件的主题 */
+/* 这是一个基础样式，确保主题切换时至少有基本样式 */
+
+/* 通用 mweb-themes 主题基础样式 - 使用精确类名匹配 */
+.preview-content.theme-ayu,
+.preview-content.theme-bear-default,
+.preview-content.theme-contrast,
+.preview-content.theme-d-boring,
+.preview-content.theme-default,
+.preview-content.theme-duotone-heat,
+.preview-content.theme-duotone-light,
+.preview-content.theme-gandalf,
+.preview-content.theme-indigo,
+.preview-content.theme-jzman,
+.preview-content.theme-lark,
+.preview-content.theme-olive-dunk,
+.preview-content.theme-red-graphite,
+.preview-content.theme-smartblue,
+.preview-content.theme-solarized-light,
+.preview-content.theme-typo,
+.preview-content.theme-v-green,
+.preview-content.theme-ayu-mirage,
+.preview-content.theme-charcoal,
+.preview-content.theme-cobalt,
+.preview-content.theme-dark-graphite,
+.preview-content.theme-dieci,
+.preview-content.theme-gotham,
+.preview-content.theme-lighthouse,
+.preview-content.theme-nord,
+.preview-content.theme-panic,
+.preview-content.theme-solarized-dark,
+.preview-content.theme-toothpaste {
+  max-width: 46rem !important;
+  margin: 0 auto !important;
+  padding: 1.6rem 3.2rem !important;
+  box-sizing: border-box !important;
+  font-family: PingFang SC, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.6em !important;
+  color: #333 !important;
+  background: #fff !important;
+}
+
+/* 深色主题基础样式 - 使用精确类名匹配 */
+body[data-theme-type="dark"] .preview-content.theme-ayu-mirage,
+body[data-theme-type="dark"] .preview-content.theme-charcoal,
+body[data-theme-type="dark"] .preview-content.theme-cobalt,
+body[data-theme-type="dark"] .preview-content.theme-dark-graphite,
+body[data-theme-type="dark"] .preview-content.theme-dieci,
+body[data-theme-type="dark"] .preview-content.theme-gotham,
+body[data-theme-type="dark"] .preview-content.theme-lighthouse,
+body[data-theme-type="dark"] .preview-content.theme-nord,
+body[data-theme-type="dark"] .preview-content.theme-panic,
+body[data-theme-type="dark"] .preview-content.theme-solarized-dark,
+body[data-theme-type="dark"] .preview-content.theme-toothpaste {
+  background: #1e1e1e !important;
+  color: #d4d4d4 !important;
+}
+
+/* 标题样式 - 针对所有 mweb-themes 主题 */
+.preview-content.theme-ayu :deep(h1),
+.preview-content.theme-bear-default :deep(h1),
+.preview-content.theme-contrast :deep(h1),
+.preview-content.theme-d-boring :deep(h1),
+.preview-content.theme-default :deep(h1),
+.preview-content.theme-duotone-heat :deep(h1),
+.preview-content.theme-duotone-light :deep(h1),
+.preview-content.theme-gandalf :deep(h1),
+.preview-content.theme-indigo :deep(h1),
+.preview-content.theme-jzman :deep(h1),
+.preview-content.theme-lark :deep(h1),
+.preview-content.theme-olive-dunk :deep(h1),
+.preview-content.theme-red-graphite :deep(h1),
+.preview-content.theme-smartblue :deep(h1),
+.preview-content.theme-solarized-light :deep(h1),
+.preview-content.theme-typo :deep(h1),
+.preview-content.theme-v-green :deep(h1),
+.preview-content.theme-ayu-mirage :deep(h1),
+.preview-content.theme-charcoal :deep(h1),
+.preview-content.theme-cobalt :deep(h1),
+.preview-content.theme-dark-graphite :deep(h1),
+.preview-content.theme-dieci :deep(h1),
+.preview-content.theme-gotham :deep(h1),
+.preview-content.theme-lighthouse :deep(h1),
+.preview-content.theme-nord :deep(h1),
+.preview-content.theme-panic :deep(h1),
+.preview-content.theme-solarized-dark :deep(h1),
+.preview-content.theme-toothpaste :deep(h1) {
+  font-size: 2em !important;
+  font-weight: bold !important;
+  margin-top: 1.5em !important;
+  margin-bottom: 0.75em !important;
+}
+
+.preview-content.theme-ayu :deep(h2),
+.preview-content.theme-bear-default :deep(h2),
+.preview-content.theme-contrast :deep(h2),
+.preview-content.theme-d-boring :deep(h2),
+.preview-content.theme-default :deep(h2),
+.preview-content.theme-duotone-heat :deep(h2),
+.preview-content.theme-duotone-light :deep(h2),
+.preview-content.theme-gandalf :deep(h2),
+.preview-content.theme-indigo :deep(h2),
+.preview-content.theme-jzman :deep(h2),
+.preview-content.theme-lark :deep(h2),
+.preview-content.theme-olive-dunk :deep(h2),
+.preview-content.theme-red-graphite :deep(h2),
+.preview-content.theme-smartblue :deep(h2),
+.preview-content.theme-solarized-light :deep(h2),
+.preview-content.theme-typo :deep(h2),
+.preview-content.theme-v-green :deep(h2),
+.preview-content.theme-ayu-mirage :deep(h2),
+.preview-content.theme-charcoal :deep(h2),
+.preview-content.theme-cobalt :deep(h2),
+.preview-content.theme-dark-graphite :deep(h2),
+.preview-content.theme-dieci :deep(h2),
+.preview-content.theme-gotham :deep(h2),
+.preview-content.theme-lighthouse :deep(h2),
+.preview-content.theme-nord :deep(h2),
+.preview-content.theme-panic :deep(h2),
+.preview-content.theme-solarized-dark :deep(h2),
+.preview-content.theme-toothpaste :deep(h2) {
+  font-size: 1.5em !important;
+  font-weight: bold !important;
+  margin-top: 1.5em !important;
+  margin-bottom: 0.75em !important;
+}
+
+.preview-content.theme-ayu :deep(h3),
+.preview-content.theme-bear-default :deep(h3),
+.preview-content.theme-contrast :deep(h3),
+.preview-content.theme-d-boring :deep(h3),
+.preview-content.theme-default :deep(h3),
+.preview-content.theme-duotone-heat :deep(h3),
+.preview-content.theme-duotone-light :deep(h3),
+.preview-content.theme-gandalf :deep(h3),
+.preview-content.theme-indigo :deep(h3),
+.preview-content.theme-jzman :deep(h3),
+.preview-content.theme-lark :deep(h3),
+.preview-content.theme-olive-dunk :deep(h3),
+.preview-content.theme-red-graphite :deep(h3),
+.preview-content.theme-smartblue :deep(h3),
+.preview-content.theme-solarized-light :deep(h3),
+.preview-content.theme-typo :deep(h3),
+.preview-content.theme-v-green :deep(h3),
+.preview-content.theme-ayu-mirage :deep(h3),
+.preview-content.theme-charcoal :deep(h3),
+.preview-content.theme-cobalt :deep(h3),
+.preview-content.theme-dark-graphite :deep(h3),
+.preview-content.theme-dieci :deep(h3),
+.preview-content.theme-gotham :deep(h3),
+.preview-content.theme-lighthouse :deep(h3),
+.preview-content.theme-nord :deep(h3),
+.preview-content.theme-panic :deep(h3),
+.preview-content.theme-solarized-dark :deep(h3),
+.preview-content.theme-toothpaste :deep(h3) {
+  font-size: 1.17em !important;
+  font-weight: bold !important;
+  margin-top: 1.5em !important;
+  margin-bottom: 0.75em !important;
+}
+
+/* 段落和列表 */
+.preview-content.theme-ayu :deep(p),
+.preview-content.theme-bear-default :deep(p),
+.preview-content.theme-contrast :deep(p),
+.preview-content.theme-d-boring :deep(p),
+.preview-content.theme-default :deep(p),
+.preview-content.theme-duotone-heat :deep(p),
+.preview-content.theme-duotone-light :deep(p),
+.preview-content.theme-gandalf :deep(p),
+.preview-content.theme-indigo :deep(p),
+.preview-content.theme-jzman :deep(p),
+.preview-content.theme-lark :deep(p),
+.preview-content.theme-olive-dunk :deep(p),
+.preview-content.theme-red-graphite :deep(p),
+.preview-content.theme-smartblue :deep(p),
+.preview-content.theme-solarized-light :deep(p),
+.preview-content.theme-typo :deep(p),
+.preview-content.theme-v-green :deep(p),
+.preview-content.theme-ayu-mirage :deep(p),
+.preview-content.theme-charcoal :deep(p),
+.preview-content.theme-cobalt :deep(p),
+.preview-content.theme-dark-graphite :deep(p),
+.preview-content.theme-dieci :deep(p),
+.preview-content.theme-gotham :deep(p),
+.preview-content.theme-lighthouse :deep(p),
+.preview-content.theme-nord :deep(p),
+.preview-content.theme-panic :deep(p),
+.preview-content.theme-solarized-dark :deep(p),
+.preview-content.theme-toothpaste :deep(p) {
+  margin-top: 0.75em !important;
+  margin-bottom: 0.75em !important;
+}
+
+/* 代码块 */
+.preview-content.theme-ayu :deep(code),
+.preview-content.theme-bear-default :deep(code),
+.preview-content.theme-contrast :deep(code),
+.preview-content.theme-d-boring :deep(code),
+.preview-content.theme-default :deep(code),
+.preview-content.theme-duotone-heat :deep(code),
+.preview-content.theme-duotone-light :deep(code),
+.preview-content.theme-gandalf :deep(code),
+.preview-content.theme-indigo :deep(code),
+.preview-content.theme-jzman :deep(code),
+.preview-content.theme-lark :deep(code),
+.preview-content.theme-olive-dunk :deep(code),
+.preview-content.theme-red-graphite :deep(code),
+.preview-content.theme-smartblue :deep(code),
+.preview-content.theme-solarized-light :deep(code),
+.preview-content.theme-typo :deep(code),
+.preview-content.theme-v-green :deep(code),
+.preview-content.theme-ayu-mirage :deep(code),
+.preview-content.theme-charcoal :deep(code),
+.preview-content.theme-cobalt :deep(code),
+.preview-content.theme-dark-graphite :deep(code),
+.preview-content.theme-dieci :deep(code),
+.preview-content.theme-gotham :deep(code),
+.preview-content.theme-lighthouse :deep(code),
+.preview-content.theme-nord :deep(code),
+.preview-content.theme-panic :deep(code),
+.preview-content.theme-solarized-dark :deep(code),
+.preview-content.theme-toothpaste :deep(code) {
+  background: #f5f5f5 !important;
+  padding: 2px 4px !important;
+  border-radius: 3px !important;
+  font-family: monospace !important;
+  font-size: 0.9em !important;
+}
+
+body[data-theme-type="dark"] .preview-content.theme-ayu-mirage :deep(code),
+body[data-theme-type="dark"] .preview-content.theme-charcoal :deep(code),
+body[data-theme-type="dark"] .preview-content.theme-cobalt :deep(code),
+body[data-theme-type="dark"] .preview-content.theme-dark-graphite :deep(code),
+body[data-theme-type="dark"] .preview-content.theme-dieci :deep(code),
+body[data-theme-type="dark"] .preview-content.theme-gotham :deep(code),
+body[data-theme-type="dark"] .preview-content.theme-lighthouse :deep(code),
+body[data-theme-type="dark"] .preview-content.theme-nord :deep(code),
+body[data-theme-type="dark"] .preview-content.theme-panic :deep(code),
+body[data-theme-type="dark"] .preview-content.theme-solarized-dark :deep(code),
+body[data-theme-type="dark"] .preview-content.theme-toothpaste :deep(code) {
+  background: #2d2d2d !important;
+}
+
+.preview-content.theme-ayu :deep(pre),
+.preview-content.theme-bear-default :deep(pre),
+.preview-content.theme-contrast :deep(pre),
+.preview-content.theme-d-boring :deep(pre),
+.preview-content.theme-default :deep(pre),
+.preview-content.theme-duotone-heat :deep(pre),
+.preview-content.theme-duotone-light :deep(pre),
+.preview-content.theme-gandalf :deep(pre),
+.preview-content.theme-indigo :deep(pre),
+.preview-content.theme-jzman :deep(pre),
+.preview-content.theme-lark :deep(pre),
+.preview-content.theme-olive-dunk :deep(pre),
+.preview-content.theme-red-graphite :deep(pre),
+.preview-content.theme-smartblue :deep(pre),
+.preview-content.theme-solarized-light :deep(pre),
+.preview-content.theme-typo :deep(pre),
+.preview-content.theme-v-green :deep(pre),
+.preview-content.theme-ayu-mirage :deep(pre),
+.preview-content.theme-charcoal :deep(pre),
+.preview-content.theme-cobalt :deep(pre),
+.preview-content.theme-dark-graphite :deep(pre),
+.preview-content.theme-dieci :deep(pre),
+.preview-content.theme-gotham :deep(pre),
+.preview-content.theme-lighthouse :deep(pre),
+.preview-content.theme-nord :deep(pre),
+.preview-content.theme-panic :deep(pre),
+.preview-content.theme-solarized-dark :deep(pre),
+.preview-content.theme-toothpaste :deep(pre) {
+  background: #f5f5f5 !important;
+  padding: 1em !important;
+  border-radius: 4px !important;
+  overflow-x: auto !important;
+  margin-top: 0.75em !important;
+  margin-bottom: 0.75em !important;
+}
+
+body[data-theme-type="dark"] .preview-content.theme-ayu-mirage :deep(pre),
+body[data-theme-type="dark"] .preview-content.theme-charcoal :deep(pre),
+body[data-theme-type="dark"] .preview-content.theme-cobalt :deep(pre),
+body[data-theme-type="dark"] .preview-content.theme-dark-graphite :deep(pre),
+body[data-theme-type="dark"] .preview-content.theme-dieci :deep(pre),
+body[data-theme-type="dark"] .preview-content.theme-gotham :deep(pre),
+body[data-theme-type="dark"] .preview-content.theme-lighthouse :deep(pre),
+body[data-theme-type="dark"] .preview-content.theme-nord :deep(pre),
+body[data-theme-type="dark"] .preview-content.theme-panic :deep(pre),
+body[data-theme-type="dark"] .preview-content.theme-solarized-dark :deep(pre),
+body[data-theme-type="dark"] .preview-content.theme-toothpaste :deep(pre) {
+  background: #2d2d2d !important;
+}
+
+/* 链接 */
+.preview-content.theme-ayu :deep(a),
+.preview-content.theme-bear-default :deep(a),
+.preview-content.theme-contrast :deep(a),
+.preview-content.theme-d-boring :deep(a),
+.preview-content.theme-default :deep(a),
+.preview-content.theme-duotone-heat :deep(a),
+.preview-content.theme-duotone-light :deep(a),
+.preview-content.theme-gandalf :deep(a),
+.preview-content.theme-indigo :deep(a),
+.preview-content.theme-jzman :deep(a),
+.preview-content.theme-lark :deep(a),
+.preview-content.theme-olive-dunk :deep(a),
+.preview-content.theme-red-graphite :deep(a),
+.preview-content.theme-smartblue :deep(a),
+.preview-content.theme-solarized-light :deep(a),
+.preview-content.theme-typo :deep(a),
+.preview-content.theme-v-green :deep(a),
+.preview-content.theme-ayu-mirage :deep(a),
+.preview-content.theme-charcoal :deep(a),
+.preview-content.theme-cobalt :deep(a),
+.preview-content.theme-dark-graphite :deep(a),
+.preview-content.theme-dieci :deep(a),
+.preview-content.theme-gotham :deep(a),
+.preview-content.theme-lighthouse :deep(a),
+.preview-content.theme-nord :deep(a),
+.preview-content.theme-panic :deep(a),
+.preview-content.theme-solarized-dark :deep(a),
+.preview-content.theme-toothpaste :deep(a) {
+  color: #0066cc !important;
+  text-decoration: underline !important;
+}
+
+body[data-theme-type="dark"] .preview-content.theme-ayu-mirage :deep(a),
+body[data-theme-type="dark"] .preview-content.theme-charcoal :deep(a),
+body[data-theme-type="dark"] .preview-content.theme-cobalt :deep(a),
+body[data-theme-type="dark"] .preview-content.theme-dark-graphite :deep(a),
+body[data-theme-type="dark"] .preview-content.theme-dieci :deep(a),
+body[data-theme-type="dark"] .preview-content.theme-gotham :deep(a),
+body[data-theme-type="dark"] .preview-content.theme-lighthouse :deep(a),
+body[data-theme-type="dark"] .preview-content.theme-nord :deep(a),
+body[data-theme-type="dark"] .preview-content.theme-panic :deep(a),
+body[data-theme-type="dark"] .preview-content.theme-solarized-dark :deep(a),
+body[data-theme-type="dark"] .preview-content.theme-toothpaste :deep(a) {
+  color: #4a9eff !important;
+}
+
