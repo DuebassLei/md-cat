@@ -246,7 +246,30 @@ export const getThemeList = () => {
 }
 
 export const getTheme = (value) => {
-  return themes[value] || themes.wechat
+  if (!value) return themes.wechat
+  
+  // 先尝试直接匹配
+  if (themes[value]) {
+    return themes[value]
+  }
+  
+  // 如果找不到，尝试将连字符转换为驼峰命名
+  const camelCaseKey = value.replace(/-([a-z])/g, (g) => g[1].toUpperCase())
+  if (themes[camelCaseKey]) {
+    return themes[camelCaseKey]
+  }
+  
+  // 如果还是找不到，尝试反向转换（驼峰转连字符）
+  const kebabCaseKey = Object.keys(themes).find(key => {
+    const kebabValue = key.replace(/([A-Z])/g, '-$1').toLowerCase()
+    return kebabValue === value
+  })
+  if (kebabCaseKey && themes[kebabCaseKey]) {
+    return themes[kebabCaseKey]
+  }
+  
+  // 默认返回wechat主题
+  return themes.wechat
 }
 
 // 将主题键名转换为驼峰命名

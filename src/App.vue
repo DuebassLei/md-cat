@@ -3,7 +3,7 @@
     <header class="app-header">
       <div class="header-title">
         <h1>Markdown Cat</h1>
-        <h6>一个将 Markdown 转换为微信公众号文章或小红书卡片风格的工具，支持实时预览和多种主题风格。</h6>
+        <h6>一个将 Markdown 转换为多种格式的编辑工具，支持实时预览，提供多种风格主题切换。</h6>
       </div>
       <div class="header-actions">
         <ThemeSelector v-model="currentTheme" @update:modelValue="handleThemeChange" />
@@ -178,10 +178,18 @@ const handleSave = () => {
   lastSaved.value = new Date().toLocaleTimeString('zh-CN')
 }
 
-const handleThemeChange = (value) => {
+const handleThemeChange = async (value) => {
+  // 确保主题值正确更新
   currentTheme.value = value
   localStorage.setItem(STORAGE_THEME_KEY, value)
+  
+  // 应用主题
   applyTheme(value)
+  
+  // 等待DOM更新
+  await new Promise(resolve => setTimeout(resolve, 50))
+  
+  // 自动保存
   autoSave()
 }
 

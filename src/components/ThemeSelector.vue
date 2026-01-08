@@ -30,7 +30,11 @@
               <div
                 v-for="theme in category.themes"
                 :key="theme.value"
-                :ref="el => { if (currentTheme === theme.value && el) activeThemeRef = el }"
+                :ref="el => { 
+                  if (el && currentTheme === theme.value) {
+                    activeThemeRef = el
+                  }
+                }"
                 class="theme-item"
                 :class="{ active: currentTheme === theme.value }"
                 @click="selectTheme(theme.value)"
@@ -79,9 +83,32 @@ const activeThemeRef = ref(null)
 const themes = getThemeList()
 
 const currentTheme = computed(() => props.modelValue)
-const currentThemeData = computed(() => getTheme(currentTheme.value))
-const currentThemeIcon = computed(() => currentThemeData.value?.icon || '📱')
-const currentThemeLabel = computed(() => currentThemeData.value?.label || '微信公众号')
+
+// 使用ref来存储主题数据，确保能及时更新
+const currentThemeDataRef = ref(getTheme(props.modelValue))
+
+const currentThemeData = computed(() => {
+  // 每次访问时都重新获取，确保数据最新
+  const theme = getTheme(props.modelValue)
+  currentThemeDataRef.value = theme || getTheme('wechat')
+  return currentThemeDataRef.value
+})
+
+const currentThemeIcon = computed(() => {
+  const data = currentThemeData.value
+  return data?.icon || '📱'
+})
+
+const currentThemeLabel = computed(() => {
+  const data = currentThemeData.value
+  return data?.label || '微信公众号'
+})
+
+// 监听modelValue变化，及时更新主题数据
+watch(() => props.modelValue, (newValue) => {
+  const theme = getTheme(newValue)
+  currentThemeDataRef.value = theme || getTheme('wechat')
+}, { immediate: true })
 
 const categories = computed(() => {
   const light = themes.filter(t => t.type === 'light')
@@ -137,33 +164,39 @@ const clearSearch = () => {
 // 滚动到当前选中的主题
 const scrollToActiveTheme = async () => {
   await nextTick()
+  
+  // 如果activeThemeRef不存在，尝试通过选择器查找
+  if (!activeThemeRef.value && categoriesRef.value) {
+    const activeItem = categoriesRef.value.querySelector('.theme-item.active')
+    if (activeItem) {
+      activeThemeRef.value = activeItem
+    }
+  }
+  
   if (activeThemeRef.value && categoriesRef.value) {
-    const container = categoriesRef.value.closest('.theme-dropdown')
-    if (container && activeThemeRef.value) {
-      // 等待 DOM 更新完成
-      await nextTick()
-      
-      // 获取容器和元素的相对位置
-      const containerScrollTop = categoriesRef.value.scrollTop
-      const containerHeight = categoriesRef.value.clientHeight
-      const itemOffsetTop = activeThemeRef.value.offsetTop
-      const itemHeight = activeThemeRef.value.offsetHeight
-      
-      // 计算元素相对于滚动容器的位置
-      const itemTop = itemOffsetTop
-      const itemBottom = itemTop + itemHeight
-      const visibleTop = containerScrollTop
-      const visibleBottom = containerScrollTop + containerHeight
-      
-      // 如果当前项不在可视区域内，滚动到它
-      if (itemTop < visibleTop || itemBottom > visibleBottom) {
-        // 滚动到元素中心位置
-        const targetScroll = itemTop - containerHeight / 2 + itemHeight / 2
-        categoriesRef.value.scrollTo({
-          top: Math.max(0, targetScroll),
-          behavior: 'smooth'
-        })
-      }
+    // 等待 DOM 更新完成
+    await nextTick()
+    
+    // 获取容器和元素的相对位置
+    const containerScrollTop = categoriesRef.value.scrollTop
+    const containerHeight = categoriesRef.value.clientHeight
+    const itemOffsetTop = activeThemeRef.value.offsetTop
+    const itemHeight = activeThemeRef.value.offsetHeight
+    
+    // 计算元素相对于滚动容器的位置
+    const itemTop = itemOffsetTop
+    const itemBottom = itemTop + itemHeight
+    const visibleTop = containerScrollTop
+    const visibleBottom = containerScrollTop + containerHeight
+    
+    // 如果当前项不在可视区域内，滚动到它
+    if (itemTop < visibleTop || itemBottom > visibleBottom) {
+      // 滚动到元素中心位置
+      const targetScroll = itemTop - containerHeight / 2 + itemHeight / 2
+      categoriesRef.value.scrollTo({
+        top: Math.max(0, targetScroll),
+        behavior: 'smooth'
+      })
     }
   }
 }
@@ -184,8 +217,13 @@ const toggleDropdown = async () => {
   }
 }
 
-const selectTheme = (value) => {
+const selectTheme = async (value) => {
+  // 立即更新本地状态，确保UI及时响应
   emit('update:modelValue', value)
+  
+  // 等待一下确保状态更新
+  await nextTick()
+  
   isOpen.value = false
   searchQuery.value = ''
 }
@@ -198,11 +236,17 @@ const closeDropdown = (e) => {
 }
 
 // 监听主题变化，如果下拉菜单打开则滚动到新主题
-watch(() => props.modelValue, () => {
+watch(() => props.modelValue, async (newValue, oldValue) => {
+  // 等待DOM更新完成
+  await nextTick()
+  
+  // 强制触发computed属性重新计算
+  void currentThemeData.value
+  
   if (isOpen.value) {
     scrollToActiveTheme()
   }
-})
+}, { immediate: false, flush: 'post' })
 
 onMounted(() => {
   document.addEventListener('click', closeDropdown)
